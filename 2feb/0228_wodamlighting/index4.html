@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<input id="email-input" type="email" placeholder="이메일">
+<input id="submitBtn" type="submit" value="Send">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        $('#email-input').on('input', function(){
+            //'input'이벤트가 발생하였을 때
+
+            let pos1 = $('#email-input').val().indexOf('@')
+            //'@'의 문자값이 어디에 있는지 찾는다.(없으면 -1)
+            let pos2 = $('#email-input').val().substr(pos1)
+            //pos1(@)뒤의 값만 가져온다.
+            pos2=pos2.indexOf('.')
+            // pos2의 '.'의 문자값이 어디에 있는지 찾는다.(없으면 -1)
+
+            console.log(pos1)
+            console.log(pos2)
+
+            if(pos1 !== -1 && pos2 !== -1){
+            //pos1 과 pos2가 -1이 아닐(=true) 때
+                $('#submitBtn').css({'background':'red'})
+            }else{
+            //pos1 과 pos2가 -1(=false)일 때
+                $('#submitBtn').css({'background':'#ddd'})
+            }
+        })
+    </script>
+</body>
+
+</html>

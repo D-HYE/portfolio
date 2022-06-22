@@ -1,0 +1,391 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+}
+
+header .inner {
+  align-items: center;
+  width: 1020px;
+  height: 70px;
+  margin: auto;
+}
+
+header .inner #logo {
+  width: 60px;
+}
+
+header .inner nav {
+  width: 540px;
+  text-align: center;
+}
+
+header .inner nav .mainNav {
+  position: relative;
+  flex: 1;
+}
+
+header .inner nav .mainNav:nth-child(2) .subNav {
+  width: 120px;
+}
+
+header .inner nav .mainNav:nth-child(5) .subNav {
+  width: 120px;
+}
+
+header .inner nav .mainNav a {
+  font-size: 1.8rem;
+}
+
+header .inner nav .mainNav a:hover {
+  color: #00833f;
+}
+
+header .inner nav .mainNav .subNav {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+}
+
+header .inner nav .mainNav .subNav a {
+  font-size: 1.4rem;
+  color: #8a8a8a;
+  line-height: 38px;
+}
+
+header .inner nav .mainNav .subNav a:hover {
+  color: #00833f;
+}
+
+header .inner .search {
+  width: 22px;
+  cursor: pointer;
+}
+
+header .fullBg {
+  width: 100%;
+  height: 210px;
+  background: #f4f4f4;
+}
+
+.top_slide {
+  padding-top: 70px;
+}
+
+.top_slide div.swiper {
+  padding-bottom: 30px;
+}
+
+.top_slide div.swiper div.swiper-button-prev {
+  width: 36px;
+  height: 71px;
+  left: 8.85%;
+  background: url(./img/btn_prev.png) no-repeat center;
+}
+
+.top_slide div.swiper div.swiper-button-prev::after {
+  content: '';
+}
+
+.top_slide div.swiper div.swiper-button-next {
+  width: 36px;
+  height: 71px;
+  right: 8.85%;
+  background: url(./img/btn_next.png) no-repeat center;
+}
+
+.top_slide div.swiper div.swiper-button-next::after {
+  content: '';
+}
+
+.top_slide div.swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  padding-top: 22px;
+}
+
+.top_slide div.swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span {
+  width: 60px;
+  height: 4px;
+  margin: 0 2px;
+  border-radius: 0;
+}
+
+.top_slide div.swiper div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #00833f;
+}
+
+.menu_slide {
+  width: 100%;
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+.menu_slide .slide_img_wrap {
+  width: 300%;
+  height: 31.263vw;
+}
+
+.menu_slide .menu_list {
+  width: 980px;
+  margin: 26px auto 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.menu_slide .menu_list li {
+  position: relative;
+  flex: 1;
+  height: 234px;
+}
+
+.menu_slide .menu_list li h3 {
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  color: #00833f;
+}
+
+.menu_slide .menu_list li p {
+  width: 70%;
+  margin: auto;
+  font-size: 1.4rem;
+  color: #b5b5b5;
+  line-height: 21px;
+}
+
+.menu_slide .menu_list li:hover p {
+  color: #6f6f6f;
+}
+
+.menu_slide .menu_list li .viewBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 50%;
+  font-weight: 600;
+}
+
+.menu_slide .menu_list li img {
+  width: auto;
+}
+
+.viewBtn {
+  height: 36px;
+  color: #00833f;
+  font-size: 1.8rem;
+  line-height: 35px;
+  border: 1px solid #00833f;
+  border-radius: 16px;
+}
+
+.viewBtn.on {
+  background: #00833f;
+  color: #fff;
+}
+
+.subTitle {
+  width: 1020px;
+  padding-bottom: 50px;
+  margin: 40px auto 45px;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid #e4e0dd;
+}
+
+.subTitle span {
+  display: block;
+  margin-top: 15px;
+  font-family: serif;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.content {
+  padding-top: 80px;
+}
+
+.itemBox .itemList {
+  width: 1020px;
+  margin: auto;
+}
+
+.itemBox .itemList li {
+  width: 238px;
+  height: 360px;
+  margin-bottom: 30px;
+  border: 1px solid #e4e0dd;
+}
+
+.itemBox .itemList li span {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.itemBox .itemList li .viewBtn {
+  display: block;
+  width: 58%;
+  margin: 13px auto 33px;
+}
+
+.itemBox .itemDetail {
+  position: relative;
+  width: 100%;
+  height: 0;
+  background: #00833f;
+  overflow: hidden;
+  /*height: 338px;height: 502px;*/
+}
+
+.itemBox .itemDetail .detail {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1020px;
+  padding: 20px 0;
+}
+
+.itemBox .itemDetail .detail .imgbox {
+  width: 50%;
+}
+
+.itemBox .itemDetail .detail .imgbox img {
+  display: block;
+  max-width: 338px;
+  margin: auto;
+}
+
+.itemBox .itemDetail .detail .txtbox {
+  width: 45%;
+  padding-top: 50px;
+  color: #fff;
+}
+
+.itemBox .itemDetail .detail .txtbox h3 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.itemBox .itemDetail .detail .txtbox h2 {
+  padding-bottom: 40px;
+  font-size: 5.2rem;
+  font-weight: normal;
+  letter-spacing: -0.4rem;
+  line-height: 60px;
+}
+
+.itemBox .itemDetail .detail .txtbox p {
+  height: 120px;
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+
+.itemBox .itemDetail .detail .txtbox p b {
+  display: block;
+  padding-bottom: 15px;
+  font-size: 2rem;
+}
+
+.itemBox .itemDetail .detail .txtbox .kindList {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.itemBox .itemDetail .detail .txtbox .kindList li {
+  width: 21%;
+}
+
+.itemBox .itemDetail .detail .txtbox .kindList li img {
+  background: #fff;
+  border: 3px solid transparent;
+}
+
+.itemBox .itemDetail .detail .txtbox .kindList li p {
+  height: auto;
+  padding-top: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.3;
+  word-break: keep-all;
+  letter-spacing: -0.2rem;
+}
+
+.itemBox .itemDetail .detail .txtbox .kindList li.on img {
+  border-color: #000;
+}
+
+.itemBox .itemDetail .detail .close {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 49px;
+  cursor: pointer;
+}
+
+.itemBox .itemDetail .detail .kindList li {
+  cursor: pointer;
+}
+
+.itemBox .itemDetail .haveKind .desc {
+  display: none;
+}
+
+.itemBox .itemDetail .haveKind .desc:first-child {
+  display: block;
+}
+
+.itemBox.second_page .itemDetail {
+  background: #e7e7e7;
+}
+
+.itemBox.second_page .itemDetail .detail .txtbox {
+  color: #000;
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  padding: 25px 0 36px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+footer a {
+  display: block;
+  width: 120px;
+  height: 24px;
+  margin: 0 auto 15px;
+  font-size: 1.4rem;
+  color: #6e6e6e;
+  line-height: 22px;
+  border: 1px solid #e6e6e6;
+}
+
+footer p {
+  font-size: 1.3rem;
+  color: #6e6e6e;
+  line-height: 21px;
+}
+
+footer .copy {
+  display: block;
+  margin-top: 15px;
+}
+
+footer .copy img {
+  width: auto;
+}

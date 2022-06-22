@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{text-decoration: none; color: #333;}
+        .box{width: 250px; margin: auto; text-align: center;}
+        button{display: block; width: 100%; cursor: pointer; padding: 10px;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img1.png" alt="img" class="avata">
+        <button >생머리</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        let sw = 0;
+
+        $('button').click(function(){
+            /*
+                $('button a').click(function(){
+                    let change = $(this).attr('href')
+                    $('.avata').attr('src':change)
+                })
+            */
+
+            sw = !sw
+            console.log(sw)
+            if(sw){
+                $('img').attr({'src':'./img2.png'})
+                $('button').text('파마머리')
+            }else{
+                $('img').attr({'src':'./img1.png'})
+                $('button').text('생머리')
+            }
+        })
+    </script>
+</body>
+</html>

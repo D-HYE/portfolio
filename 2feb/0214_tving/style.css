@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'LeferiPoint-WhiteObliqueA'; line-height: 1;}
+a{text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer; text-indent: -9999px;}
+
+.flex{display: flex; justify-content: space-between;}
+.inner{max-width: 1200px; min-width: 600px; margin: auto;}
+a{display: block;}
+
+.wrap{position: relative; left: 0; min-width: 1200px; height: 100vh; background: url(./img/WorkLater_DrinkNow.png) no-repeat center top/cover; overflow: hidden;}
+.wrap::after{content: ""; position: fixed; top: 0; left: 0; z-index: -5; width: 100%; height: 100%; background: rgba(0, 0, 0, .5);}
+
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; height: 120px; background: rgba(0, 0, 0, .3);}
+h1{padding: 20px; background-image: linear-gradient(to bottom, rgba(231, 25, 61, 0.7), rgba(231, 25, 61, 0));}
+#logo a{width: 120px; margin: auto;}
+#logo a img{width: 100%;}
+header nav{border-top: 1px solid #fff; border-bottom: 1px solid #fff;}
+header li a{padding: 15px 25px; font-size: 1.5rem; color: #fff; font-weight: bold;}
+header li:hover a{color: #e7193d;}
+header .service a{width: 45px; height: 45px; margin-right: 20px; text-indent: -9999px;}
+header .service li:first-child a{background: url(./img/icon_search.svg) no-repeat center;}
+header .service li:last-child a{width: 35px; height: 35px;margin-top: 5px; background: url(./img/F_webp\,100.webp) no-repeat center/contain;}
+
+main{position: relative; left: 50%; transform: translateX(-50%); max-width: 1200px; padding: 100px 20px; margin-top: 140px;}
+main .leftCont{position: relative; width: 50%; height: 580px;}
+main .leftCont figure{position: absolute; left: 0; top: 0; width: 100%; margin-bottom: 10px;}
+main .leftCont video{width: 100%;}
+.leftCont .btnWrap{position: absolute; left: 50%; bottom: 170px; transform: translateX(-50%); justify-content: center; gap: 50px; width: 100%;}
+.leftCont li{background: #e7193b; border-radius: 30px;}
+.leftCont .btn1:hover{background: #fff;}
+.leftCont .btn1:hover a{color: #e7193b;}
+.leftCont .btn2{background: none; border: 2px solid #fff;}
+.leftCont a{padding: 20px 50px 10px; font-size: 1.8rem; font-weight: bold; color: #fff;}
+.leftCont .btn2:hover{border-color: #e7193b;}
+.leftCont .btn2:hover a{color: #e7193b;}
+.rightCont figure{position: absolute; top: 20%; right: 2%; width: 400px;}
+.rightCont figure img{width: 100%;}
+
+.box1{position: absolute; left: 50%; top: 50%;transform: translate(-50%, -40%); display: none; width: 1000px; height: 517px;}
+.box1 .close{position: absolute; left: 50%; bottom: -70px; transform: translateX(-50%);}
+.box1 .close a{width: 40px; height: 40px; background: url(./img/x.png) no-repeat center;}
+.box1 .close:hover a{background-image: url(./img/x_red.png);}
+article.art1{
+    width: 100%; height: 100%; padding: 20px; background: #fff; overflow: hidden; display: none; box-shadow:rgba(255, 15, 55, 0.2) 0px 0px 10px 5px;}
+article.art1 .flex{justify-content:flex-start; gap: 20px; width: 175%; margin-left: -340px;}
+article.art1 .flex li{width: 35%;}
+article.art1 .flex li img{width: 100%;}
+button{position: absolute; top: 40%; left: -60px; z-index: 10; width: 100px; height: 50px; background: url(./img/icon_slide_left.svg) no-repeat left center , #e7193b; opacity: 0; border-radius: 25px; transition: .3s;}
+button.right{left: inherit; right: -60px; background-image: url(./img/icon_slide_right.svg); background-position: right center;}
+button:hover{width: 100px; opacity: 1;}
+
+.box2{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -45%); display: none; width: 1000px; height: 500px;}
+.box2 .art2{width: 100%; height: 0; padding: 25px 50px; background: #fff; box-shadow:rgba(255, 15, 55, 0.2) 0px 0px 10px 5px; overflow: hidden; opacity: 0;}
+.box2 .art2 figure{height: 450px;}
+.box2 .art2 figure img{height: 100%;}
+.box2 .art2 .desc{width: 55%;}
+.box2 .art2 .desc h2{margin: 50px 0 20px; font-size: 2.5rem; color: #e7193b;}
+.box2 .art2 .desc h2 b{font-weight: bold;}
+.box2 .art2 .desc .flex{justify-content: flex-start; gap: 15px;}
+.box2 .art2 .desc li{padding: 10px 20px 5px; color: #777; font-size: 1.4rem; font-weight: bold; border: 1px solid #999; border-radius: 5px;}
+.box2 .art2 .desc a{width: 200px; height: 50px; margin-top: 100px; line-height: 55px; text-align: center; color: #fff; font-size: 1.6rem; font-weight: bold; background: #e7193b; border-radius: 25px;}
+.box2 .art2 .desc a:hover{ background: #ccc;}
+.box2 .art2 .desc p{width: 350px; margin-top: 30px; font-size: 1.5rem; font-weight: bold; line-height: 1.5;
+}
+.box2 .close{position: absolute; left: 50%; bottom: -70px; transform: translateX(-50%);}
+.box2 .close a{width: 40px; height: 40px; background: url(./img/x.png) no-repeat center;}
+.box2 .close:hover a{background-image: url(./img/x_red.png);}
+
+.box1>p, .box2>p{background: #e7193b; position: absolute;}
+p.lineTop{left: 0; top: 0; width: 0; height: 1px;}
+p.lineRight{top: 0; right: 0; width: 1px; height: 0; }
+p.lineBottom{right: 0; bottom: 0; width: 0; height: 1px; }
+p.lineLeft{bottom: 0; left: 0; width: 1px; height: 0;}
+
+.bg{position: fixed; top: 0; left: 0;  display: none; width: 100%; height: 100%; background: rgba(0, 0, 0, .5);}
+
+footer{min-width: 1200px; padding: 20px; background: #000;}
+footer .copy{color: #ccc; font-size: 1.3rem;}

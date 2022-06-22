@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p id="demo"></p>
+    <script>
+        
+        let 숫자1 = Number(prompt('숫자1을 입력하세요')) //형 변형
+        let 연산자 = prompt('연산자를 입력하세요');
+        let 숫자2 = Number(prompt('숫자2를 입력하세요'))
+        let result = 0;
+
+        function 계산기(a, op, b){
+            result;
+
+            switch (op){
+                case "+":
+                result=a+b;
+                    return result; 
+                case "-":
+                result=a-b;
+                    return result;
+                case "*":
+                result=a*b;
+                    return result;
+                case "/":
+                result=a/b;
+                    return result;
+                default:
+                    alert('연산자를 바르게 입력하세요')
+            }
+        }
+        result = 계산기(숫자1,연산자,숫자2)
+
+        document.getElementById('demo').innerHTML = `${숫자1}${연산자}${숫자2}=${result}`
+
+
+    </script>
+</body>
+
+</html>

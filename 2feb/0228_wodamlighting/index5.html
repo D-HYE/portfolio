@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id='myemail' type="email" placeholder="이메일을 입력하세요">
+    <input id='sendbtn' type="submit" value="send">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#myemail').on('input', function(){
+            let pos1 = $('#myemail').val().indexOf('@')
+            let pos2 = $('#myemail').val().substr(pos1) //@뒤부터의 글자
+            pos2 = pos2.indexOf('.');
+            console.log(pos1)
+            console.log(pos2)
+
+            if( pos1 !== -1 && pos2 !== -1){
+                $('#sendbtn').css({'background':'#fff'})
+            }else{
+                $('#sendbtn').css({'background':'#0ff'})
+            }
+        })
+    </script>
+</body>
+</html>

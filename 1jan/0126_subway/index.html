@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBWAY</title>
+
+    <link rel="stylesheet" href="./subway.css">
+    
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="./subway.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headCont inner">
+            <h1 id="logo" class="posCent"><a href="#"><img src="./img/logo_w.png" alt="subway"></a></h1>
+            <ul class="flex">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#"><button>글로벌</button></a></li>
+            </ul>
+        </div>
+        <nav class="headNav">
+            <div class="inner">
+                <ul class="flex">
+                    <li class="mainNav">
+                        <a href="#">메뉴소개</a>
+                        <ul class="subNav">
+                            <li><a href="#">샌드위치</a></li>
+                            <li><a href="#">랩 · 기타</a></li>
+                            <li><a href="#">샐러드</a></li>
+                            <li><a href="#">아침메뉴</a></li>
+                            <li><a href="#">스마일 썹</a></li>
+                            <li><a href="#">단체메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainNav">
+                        <a href="#">이용방법</a>
+                        <ul class="subNav">
+                            <li><a href="#">써브웨이 이용방법</a></li>
+                            <li><a href="#">단체메뉴 이용방법</a></li>
+                            <li><a href="#">신선한 재료 소개</a></li>
+                            <li><a href="#">APP 이용방법</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainNav">
+                        <a href="#">새소식</a>
+                        <ul class="subNav">
+                            <li><a href="#">이벤트·프로모션</a></li>
+                            <li><a href="#">뉴스·공지사항</a></li>
+                            <li><a href="#">광고영상</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainNav">
+                        <a href="#">써브웨이</a>
+                        <ul class="subNav">
+                            <li><a href="#">써브웨이 역사</a></li>
+                            <li><a href="#">써브웨이 약속</a></li>
+                            <li><a href="#">샌드위치 아티스트 지원</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainNav">
+                        <a href="#">가맹점</a>
+                        <ul class="subNav">
+                            <li><a href="#">써브웨이 프랜차이즈</a></li>
+                            <li><a href="#">가맹관련 FAQ</a></li>
+                            <li><a href="#">가맹신청·문의</a></li>
+                            <li><a href="#">지사안내</a></li>
+                            <li><a href="#">사업설명회</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainNav">
+                        <a href="#">온라인 주문</a>
+                        <ul class="subNav">
+                            <li><a href="#">FAST-SUB</a></li>
+                            <li><a href="#">HOME-SUB</a></li>
+                            <li><a href="#">단체주문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg"></div>
+        </nav>
+    </header>
+    <section>
+        <div class="currentNav">
+            <div class="inner">
+                <ul class="flex">
+                    <li><a href="#">이벤트 · 프로모션</a></li>
+                    <li><a href="#">뉴스 · 공지사항</a></li>
+                    <li><a href="#">광고영상</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main inner">
+            <h2>이벤트 · 프로모션</h2>
+            <div class="slideContainer">
+                <div class="slideWrap flex">
+                    <div class="slide flex">
+                        <figure><img src="./img/말이 안 나올 땐 손으로 주문하자_.jpg" alt="스노우메이커"></figure>
+                        <div class="slideCont">
+                            <h3>2020.10.16 ~</h3>
+                            <b>말이 안 나올 땐 손으로<br/> 주문하자!</b>
+                            <p>말이 안 나올 땐?<br/>손으로 주문하자!</p>
+                            <button>자세히보기<span></span></button>
+                        </div>
+                    </div>
+                    <div class="slide flex">
+                        <figure><img src="./img/스모어스가 돌아왔다_.jpg" alt="스모어스"></figure>
+                        <div class="slideCont">
+                            <h3>2022.01.13 ~ 소진 시</h3>
+                            <b>스모어스가 돌아왔다!</b>
+                            <p>초코칩 쿠키에 마쉬멜로우, 초코 드리즐이 더해진 스모어스 쿠키!</p>
+                            <button>자세히보기<span></span></button>
+                        </div>
+                    </div>
+                    <div class="slide flex">
+                        <figure><img src="./img/이탈리안 비엠티.jpg" alt="이탈리안비엠티"></figure>
+                        <div class="slideCont">
+                            <h3>2022.01.03 ~ 2022.03.01</h3>
+                            <b>이탈리안 비엠티</b>
+                            <p>팔렸다 3초에 1개</p>
+                            <button>자세히보기<span></span></button>
+                        </div>
+                    </div>
+                    <div class="slide flex">
+                        <figure><img src="./img/카도 스노우 메이커.jpg" alt="스노우메이커"></figure>
+                        <div class="slideCont">
+                            <h3>2022.01.13 ~ 소진 시</h3>
+                            <b>카도 스노우 메이커</b>
+                            <p>소복소복 쌓일 눈이 벌써 기다려지는 이유<br/>카도 스노우 메이커</p>
+                            <button>자세히보기<span></span></button>
+                        </div>
+                    </div>
+                </div>
+                <button class="lbtn">left</button>
+                <button class="rbtn">right</button>
+            </div>
+        </div>
+    </section>
+    <section class="event">
+        <div class="inner">
+            <div class="tabMenu">
+                <ul class="flex">
+                    <li><a href="#all" class="click">전체</a></li>
+                    <li><a href="#current">진행중인 이벤트</a></li>
+                    <li><a href="#close">종료된 이벤트</a></li>
+                </ul>
+            </div>
+            <div class="tabWrap">
+                <div class="tabCont" id="all">
+                    <ul class="flex">
+                        <li><a href="#">
+                            <figure><img src="./img/tab1.jpg" alt="스모어스"></figure>
+                            <figcaption>
+                                <h3>스모어스가 돌아왔다!</h3>
+                                <b>2022.01.13 ~ 소진 시</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab2.jpg" alt="스노우메이커"></figure>
+                            <figcaption>
+                                <h3>카도 스노우 메이커</h3>
+                                <b>2022.01.13 ~ 소진 시</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab3.jpg" alt="이탈리안 비엠티"></figure>
+                            <figcaption>
+                                <h3>이탈리안 비엠티</h3>
+                                <b>2022.01.03 ~ 2022.03.01</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab4.jpg" alt="쟌슨빌"></figure>
+                            <figcaption>
+                                <h3>SUB DOG! 써브웨이와 쟌슨빌의 썹띵!</h3>
+                                <b>2021.09.06 ~ 한정 판매</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab5.jpg" alt="서브웨이앱"></figure>
+                            <figcaption>
+                                <h3>말이 안 나올 땐 손으로 주문하자!</h3>
+                                <b>2020.10.16 ~</b>
+                            </figcaption>
+                        </a></li>
+                        <li class="close"><a href="#">
+                            <figure><img src="./img/tab6.jpg" alt="카도무드램프"></figure>
+                            <figcaption>
+                                <h3>겨울밤을 따뜻하게 비춰줄 카도 무드 램프</h3>
+                                <b>이벤트가 종료되었습니다.</b>
+                            </figcaption>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="tabCont" id="current">
+                    <ul class="flex">
+                        <li><a href="#">
+                            <figure><img src="./img/tab1.jpg" alt="스모어스"></figure>
+                            <figcaption>
+                                <h3>스모어스가 돌아왔다!</h3>
+                                <b>2022.01.13 ~ 소진 시</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab2.jpg" alt="스노우메이커"></figure>
+                            <figcaption>
+                                <h3>카도 스노우 메이커</h3>
+                                <b>2022.01.13 ~ 소진 시</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab3.jpg" alt="이탈리안 비엠티"></figure>
+                            <figcaption>
+                                <h3>이탈리안 비엠티</h3>
+                                <b>2022.01.03 ~ 2022.03.01</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab4.jpg" alt="쟌슨빌"></figure>
+                            <figcaption>
+                                <h3>SUB DOG! 써브웨이와 쟌슨빌의 썹띵!</h3>
+                                <b>2021.09.06 ~ 한정 판매</b>
+                            </figcaption>
+                        </a></li>
+                        <li><a href="#">
+                            <figure><img src="./img/tab5.jpg" alt="서브웨이앱"></figure>
+                            <figcaption>
+                                <h3>말이 안 나올 땐 손으로 주문하자!</h3>
+                                <b>2020.10.16 ~</b>
+                            </figcaption>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="tabCont" id="close">
+                    <ul class="flex">
+                        <li class="close"><a href="#">
+                            <figure><img src="./img/tab6.jpg" alt="카도무드램프"></figure>
+                            <figcaption>
+                                <h3>겨울밤을 따뜻하게 비춰줄 카도 무드 램프</h3>
+                                <b>이벤트가 종료되엇습니다.</b>
+                            </figcaption>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="moreBtn">더보기</a>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <ul class="utilMenu flex">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#" class="bold">개인정보처리방침</a></li>
+                <li><a href="#">써브카드</a></li>
+                <li><a href="#">점주관리자</a></li>
+                <li><a href="#">Subway Listens</a></li>
+            </ul>
+            <div class="copy">
+                
+                <div class="copyDesc">
+                    <address>서울시 서초구 강남대로 535 프린스빌딩 15층 | 대표 : 콜린클락 | 전화 : 02-797-5036 | 사업자등록번호 : 101-84-04143</address>
+                    <p>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights Reserved.</p>
+                </div>
+                
+                <ul class="sns flex">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

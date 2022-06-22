@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'dabanggu';
+    src: url(./img/Typo_DabangguB.16840f6f.woff2);
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer;}
+
+.flex{display: flex; justify-content: space-between;}
+
+body{background: #34cc67;}
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%;}
+header .inner{align-items: center; height: 100px; padding: 0 10%; border-bottom: 2px solid #000; background: #fff;}
+#logo a, li a{height: 80px;}
+header img{height: 100%;}
+header img.on{display: none;}
+
+.wrap{max-width: 1200px; margin: 150px auto 100px; padding-bottom: 80px; background: #fff;}
+.widget{max-width: 1200px; margin: auto; padding: 0 0 70px;}
+.widget img{width: 100%;}
+section{position: relative; max-width: 1100px; height: auto;  margin: auto;}
+
+.placeT{width: 100%; height: 785PX; border-bottom: 5px solid #000; overflow: hidden;}
+.slidewrapT{width: 400%; margin-left: -100%;}
+.slidewrapT .slide{width: 100%; text-align: center;}
+.slidewrapT h2{margin-bottom: 35px; font-family: 'dabanggu', 'sans-serif'; font-size: 5rem; color: #fe0166; font-weight: normal; transition: .3s;}
+.slidewrapT figure img{width: 100%; border: 3px solid #000;}
+
+/*.namwon, .anduck, .hangyeong{display: none;}*/
+
+.placeB{width: 100%; height: 500px; margin-top: 50px; overflow: hidden;}
+.slidewrapB{width: 100%; height: 400%; margin-top: -500px;}
+.slidewrapB .slide{width: 100%; height: 500px;}
+
+/* 콘텐츠 */
+.slidewrapB img{width: 100%;}
+.slidewrapB .content{position: relative; width: 65%; height: 100%;}
+/* 나뭇잎*/
+.slidewrapB .leaf{position: absolute; bottom: 20px; right: 10%; width: 150px; height: 180px; cursor: pointer; transition: .2s; opacity: .5;}
+.slidewrapB .leaf span{display: none; width: 100%; padding: 5px 0; font-family: 'dabanggu', 'sans-serif'; font-size: 2.2rem;  text-align: center;}
+.slidewrapB .leaf:hover span{color: #fe0166;}
+/* 내용 */
+.slidewrapB .content>div{position: absolute; display: none; padding: 50px; transition: .3s;}
+.slidewrapB .content>div.on{display: block;}
+.slidewrapB .content .default{margin-left: 50px; background: url(./img/speech-bubble.svg) no-repeat center/contain;}
+.slidewrapB h2{margin-bottom: 20px; padding-left: 30px; font-family: 'dabanggu','sans-serif'; font-size: 3rem; font-weight: normal;}
+.slidewrapB .default p{width: 460px; padding: 0 30px 20px; font-size: 1.5rem; line-height: 1.5;}
+.slidewrapB .desc h2{padding: 0; font-size: 4.5rem; color: #000;}
+.slidewrapB .desc h3{font-size: 1.8rem; color: #666;}
+.slidewrapB .desc h3 b{display: block; margin-top: 5px; color: #fe0166;}
+.slidewrapB .desc p{padding: 30px 5% 0 0; font-size: 1.4rem; line-height: 1.7;}
+
+
+/* 리스트 */
+.slidewrapB .list{width: 30%; transition: .3s;}
+.slidewrapB .list a{position: relative; width: 100%; height: 160px; margin-bottom: 10px; border: 3px solid #000; overflow: hidden;}
+.slidewrapB .list a img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.slidewrapB .list a span{position: absolute; bottom: 0; left: 0; display: block; width: 100%; padding: 25px 0; font-size: 1.5rem; color: #fff; text-align: center; background: rgba(0, 0, 0, .5); opacity: 0; transition: .3s;}
+.slidewrapB .list a:hover span{opacity: 1;}
+
+.btn button{position: absolute; top: 56%; z-index: 5; width: 70px; height: 70px; background: url(./img/icon_slide_left.svg) no-repeat center left, #fe0166; border-radius: 35px; transition: .3s;}
+.btn button.lbtn{left: -7.5%;}
+.btn button.rbtn{background-image: url(./img/icon_slide_right.svg); background-position-x: right; right: -7.5%;}
+.btn button.on{width: 140px;}
+
+@media only screen and (max-width : 1200px){
+    .placeT{height: 63.636vw;}
+    .slidewrapT h2{margin-bottom: 25px; font-size: 3.5rem;}
+    .btn button{top: 50%; width: 50px; height: 50px;}
+    .btn button.lbtn{left: 1%;}
+    .btn button.rbtn{right: 1%;}
+    .btn button.on{width: 100px;}
+    
+    .slidewrapB .content .default{margin-left: 0;}
+}
+
+@media only screen and (max-width : 800px){
+
+    .btn button{top: 37.5%;}
+    .slidewrapB .content{width: 85%;}
+    .slidewrapB .content>div{padding: 50px 5%;}
+    .slidewrapB .leaf{bottom: 145px; right: -55px; width: 100px; height: 120px;}
+    .slidewrapB .leaf span{padding: 0; font-family: 'Noto Sans KR', sans-serif; font-weight: bold; font-size: 1.5rem;}
+
+    .slidewrapB h2{font-size: 2.2rem;}
+    .slidewrapB .desc h2{font-size: 2.5rem;}
+    .slidewrapB .desc h3{font-size: 1.6rem;}
+    .slidewrapB .desc p{padding: 20px 0 0;}
+    .slidewrapB .slide{position: relative;}
+    .slidewrapB .list{position: absolute; bottom: 0; width: 100%;}
+    .slidewrapB .list ul{display: flex; justify-content: space-between; padding: 0 2.5%;}
+    .slidewrapB .list ul li{width: 33%;}
+    .slidewrapB .list ul li a{height: 120px;}
+    .slidewrapB .list ul li a img{width: 130%;}
+}

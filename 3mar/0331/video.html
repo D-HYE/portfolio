@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동영상</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .video{width: 600px; margin: 100px auto;}
+        button{padding: 10px;}
+    </style>
+</head>
+<body>
+
+    <div class="video">
+        <video src="./redvelbet.mp4" muted loop width="600"></video>
+        <button class="play">Play</button>
+        <button class="stop">Stop</button>
+        <button class="pause">Pause</button>
+        <button class="rate1">1배속</button>
+        <button class="rate2">2배속</button>
+        <button class="next">&gt;&gt;</button>
+        <button class="prev">&lt;&lt;</button>
+        <button class="size">100%</button>
+        <button class="sizeup">200%</button>
+        <button class="sizedown">50%</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let v = $('video').get(0)
+        $('.play').click(function(){    
+            v.play()
+        })
+        $('.pause').click(function(){
+            v.pause()
+        })
+        $('.stop').click(function(){ 
+            v.currentTime = 0; //시작점을 처음으로 다시 시작 repaly 아님?
+        })
+        $('.rate1').click(function(){ 
+            v.playbackRate = 1;
+        })
+        $('.rate2').click(function(){ 
+            v.playbackRate = 2;
+        })
+        $('.prev').click(function(){ 
+            v.currentTime -= 1;
+        })
+        $('.next').click(function(){ 
+            v.currentTime += 1;
+        })
+        $('.size').click(function(){ 
+            v.width = 600;
+        })
+        $('.sizeup').click(function(){ 
+            v.width = 1200;
+        })
+        $('.sizedown').click(function(){ 
+            v.width = 300;
+        })
+    </script>
+</body>
+</html>

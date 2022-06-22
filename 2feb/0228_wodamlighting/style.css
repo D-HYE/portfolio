@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+
+.flex{display: flex; align-items: center;}
+header{position: fixed; z-index: 10; width: 100%; height: 110px; background: #fff;}
+header .mainNav>a{position: relative; padding: 0 30px; font-size: 1.8rem;}
+header .suvNav{position: absolute; top: 105px; width: 140px; padding: 0 10px; background: #fff; border-top: 5px solid #f47a20;}
+header .suvNav a{font-size: 1.3rem; color: #848484; font-weight: bold; line-height: 35px; border-bottom: 1px solid #e8e8e8;}
+header .suvNav a:hover{color: #f47a20;}
+header .suvNav li:last-child a{border-bottom: none;}
+
+section.sect1{width: 100vw; height: 100vh; background: url(./img/bg_visual.jpg) no-repeat center; background-attachment: fixed;}
+
+.swiper{width: 100vw; height: 100vh;}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    height: 100%;
+  }
+.swiper nav{position: absolute; top: 135px; left: 98px; z-index: 10;}
+.swiper nav span{display: block; width: 100px; height: 100px;background: url(./img/전체메뉴.png) no-repeat center, #f47a20;}
+.swiper nav a{width: 100px; height: 100px; background: #040813; text-align: center; line-height: 100px; font-size: 1.5rem; color: #b6b6b6;}
+.swiper nav li.on a{color: #f47a20;}
+.swiper .desc{position: absolute; top: 135px; left: 275px; z-index: 10;}
+.swiper .desc h2{font-size: 2.8rem; color: #fff; font-weight: normal;}
+.swiper .desc h3{padding: 45px 0 30px; font-size: 3rem; color: #fff; font-weight: normal;}
+.swiper .desc p{width: 340px; font-size: 1.4rem; color: #fff; font-weight: 300; line-height: 23px; opacity: .7;}
+
+section.sect3 .flex{width: 100%; height: 530px;}
+section.sect3 .bg1{ position: relative; width: 35%; height: 100%; background: url(./img/bg_bnr_1.jpeg) no-repeat center/cover;}
+section.sect3 .product{position: absolute; top: 0; left: 0; width: 620px; height: 530px; background: url(./img/banner_product.png) no-repeat right top;}
+section.sect3 .bg2{width: 75%; height: 100%; background: url(./img/bg_bnr_2.jpeg) no-repeat center/cover;}

@@ -1,0 +1,135 @@
+<body>
+    <div class="flex product"id="home_creations">
+        <div class="left-menu pc">
+            <h2>CLASSIC COLLECTION</h2>
+            <ul>
+                <li><a href="#">SANTAL 33</a></li>
+                <li><a href="#">ENCENS 9</a></li>
+                <li><a href="#">PALO SANTO 14</a></li>
+                <li><a href="#">CALONE 17</a></li>
+                <li><a href="#">FIGUE 15</a></li>
+                <li><a href="#">LAURIER 62</a></li>
+                <li><a href="#">PETIT GRAIN 21</a></li>
+                <li><a href="#">CADE 26</a></li>
+                <li><a href="#">PIN 12</a></li>
+                <li><a href="#">VERVEINE 32</a></li>
+                <li><a href="#">CEDRE 11</a></li>
+                <li><a href="#">ANIS 24</a></li>
+            </ul>
+        </div>
+        <div class="product-tap">
+            <ul>
+                <li>
+                    <img src="./img/candle_SANTAL26.jpg" alt="SANTAL 26">
+                    <div class="desc">
+                        <h3>SANTAL 26</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_ENCENS9.jpg" alt="ENCENS 9">
+                    <div class="desc">
+                        <h3>SANTAL 26</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_PALOSANTO14.jpg" alt="PALO SANTO 14">
+                    <div class="desc">
+                        <h3>PALO SANTO 14</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_CALONE17.jpg" alt="CALONE 17">
+                    <div class="desc">
+                        <h3>CALONE 17</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_FIGUE15.jpg" alt="FIGUE 15">
+                    <div class="desc">
+                        <h3>FIGUE 15</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_LAURIER62.jpg" alt="LAURIER 62">
+                    <div class="desc">
+                        <h3>LAURIER 62</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_PETITGRAIN21.jpg" alt="PETITGRAIN 21">
+                    <div class="desc">
+                        <h3>PETITGRAIN 21</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_CADE26.jpg" alt="CADE 26">
+                    <div class="desc">
+                        <h3>CADE 26</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_PIN12.jpg" alt="PIN 12">
+                    <div class="desc">
+                        <h3>PIN 12</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_VERVEINE32.jpg" alt="VERVEINE 32">
+                    <div class="desc">
+                        <h3>VERVEINE 32</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+                <li>
+                    <img src="./img/candle_CEDRE11.jpg" alt="CEDRE 11">
+                    <div class="desc">
+                        <h3>CEDRE 11</h3>
+                        <p>classic candle / 8.6 oz</p>
+                        <h4 class="flex"><span>Add to cart</span> USD $80.00</h4>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="right-menu">
+            <h2>By Format</h2>
+            <ul>
+                <li><a href="#">CLASSIC CANDLE</a></li>
+                <li><a href="#">HOME FRAGRANCE</a></li>
+                <li><a href="#">CONCRETE CANDLE</a></li>
+                <li><a href="#">VOTIVES</a></li>
+                <li><a href="#">DISCOVERY</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(window).on('scroll', function(){
+            let winST = $(this).scrollTop()
+            let prdH = $('.product').height()
+            if(winST >= prdH - 600){
+                $('.left-menu').stop().animate({'opacity' : 0}, 300)
+            }else{
+                $('.left-menu').stop().animate({'opacity' : 1}, 300)
+            }
+        })
+    </script>
+</body>

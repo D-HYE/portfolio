@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coway</title>
+
+    <link rel="stylesheet" href="./ex.css">
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){        
+            $('.tabImg figure:gt(0)').hide();
+
+            $('.tabList li a').mouseenter(function(){
+                $('.tabList li a').removeClass('click')
+                $(this).addClass('click')
+
+                let tabLink = $(this).attr('href');
+
+                $('.tabImg figure').fadeOut(20);
+                $(tabLink).fadeIn(200);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <section>
+            <div class="title">
+                <h3>STORY</h3>
+                <h2>스마트한 공간을 만들어 줄 코웨이 스토리</h2>
+            </div>
+            
+            <div class="cont">
+                <div class="tabList">
+                    <ul>
+                        <li><a href="#img1" class="click">
+                            <span>01</span><b>방탄소년단이 선택한 코웨이</b>
+                            <i>Coway X BTS</i>
+                        </a></li>
+                        <li><a href="#img2">
+                            <span>02</span><b>코웨이 서포터즈와 함께하는</b>
+                            <i>랜선 집들이</i>
+                        </a></li>
+                        <li><a href="#img3">
+                            <span>03</span><b>생생하게 만나는 리얼 고객 후기</b>
+                            <i>베스트리뷰</i>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="tabImg">
+                    <figure id="img1"><img src="./main_story_bg1.jpg" alt="이미지"></figure>
+                    <figure id="img2"><img src="./main_story_bg2.jpg" alt="이미지" ></figure>
+                    <figure id="img3"><img src="./main_story_bg3.jpg" alt="이미지" ></figure>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</body>
+</html>

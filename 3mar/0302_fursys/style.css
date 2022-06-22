@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; text-indent: -9999px; cursor: pointer;}
+
+.flex{display: flex;}
+
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; height: 100px; background: #fff;}
+header .inner{align-items: center; height: 100px; }
+#logo{margin: 0 40px 0 30px;}
+header .gnb li{padding: 0px 15px 0px 17px; background: url(./img/menuLine.jpg) left center no-repeat;}
+header .gnb li:first-child{background: none;}
+header .gnb li a{font-size: 1.6rem; color: #898989; font-weight: 500;}
+
+.mainWrap{margin-top: 100px;}
+.mainSlider nav{position: absolute; top: 100px; left: 0; z-index: 3; width: 50px; height: 830px; background: #fff;}
+.mainSlider nav li a{width: 50px; height: 50px; text-indent: -9999px;background: url(./img/mainBtn1_leave.jpg);}
+.mainSlider nav li.on a, .mainSlider nav li:first-child a:hover{background-image: url(./img/mainBtn1_over.jpg);}
+
+.mainSlider nav li:nth-child(2) a{background-image: url(./img/mainBtn2_leave.jpg);}
+.mainSlider nav li:nth-child(2).on a, .mainSlider nav li:nth-child(2) a:hover{background-image: url(./img/mainBtn2_over.jpg);}
+.mainSlider nav li:nth-child(3) a{background-image: url(./img/mainBtn3_leave.jpg);}
+.mainSlider nav li:nth-child(3).on a, .mainSlider nav li:nth-child(3) a:hover{background-image: url(./img/mainBtn3_over.jpg);}
+.mainSlider nav li:nth-child(4) a{background-image: url(./img/mainBtn4_leave.jpg);}
+.mainSlider nav li:nth-child(4).on a, .mainSlider nav li:nth-child(4) a:hover{background-image: url(./img/mainBtn4_over.jpg);}
+.mainSlider nav li:nth-child(5) a{background-image: url(./img/mainBtn5_leave.jpg);}
+.mainSlider nav li:nth-child(5).on a, .mainSlider nav li:nth-child(5) a:hover{background-image: url(./img/mainBtn5_over.jpg);}
+.mainSlider nav li:nth-child(6) a{background-image: url(./img/mainBtn6_leave.jpg);}
+.mainSlider nav li:nth-child(6).on a, .mainSlider nav li:nth-child(6) a:hover{background-image: url(./img/mainBtn6_over.jpg);}
+.swiper{position: relative; width: 750px; height: 830px; margin-left: 50px; overflow: hidden; background: #f7f6f4;}
+.swiper-slide{position: relative; display: flex; justify-content: center; width: 750px; height: 830px; background: url(./img/mainbanner1bg1.png) no-repeat right top/cover;}
+.swiper-slide:nth-child(2){background-image: url(./img/mainbanner2bg1.png);}
+.swiper-slide:nth-child(3){background-image: url(./img/mainbanner3bg1.png);}
+.swiper-slide:nth-child(4){background-image: url(./img/mainbanner4bg1.png);}
+.swiper-slide:nth-child(5){background-image: url(./img/mainBanner5bg1.png);}
+.swiper-slide:nth-child(6){background-image: url(./img/mainBanner6bg1.png);}
+.swiper-slide .summary{position: absolute; left: 5%; top: 9%; width: 35%;}
+.swiper-slide .summary h2{padding-bottom: 20px; font-size: 4rem; font-weight: 500; line-height: 1.3;}
+.swiper-slide .summary p{padding: 30px 0; background: url(./img/titLine.jpg) no-repeat; color: #666; font-size: 1.3rem; line-height: 1.4; font-weight: 300;}
+
+.sitemap{position: absolute; top: 0; left: 0; z-index: 5; display: none; width: 100%; height: 100%; padding: 60px; background: url(./img/siteMapBg.png);}
+.sitemap h2{margin-bottom: 50px; font-size: 5rem; color: #fff; line-height: 1;}
+.siteMain{padding: 20px 0; border-bottom: 1px solid #b23030;}
+.siteMain span{display: block; width: 130px; font-size: 3rem; color: #fff; line-height: 1.3;}
+.siteSub a{margin: 5px; padding: 5px; color: whitesmoke; font-size: 1.6rem;}
+
+.fursysCenter{position: absolute; top: 20px; right: 20px; z-index: 3;}
+.fursysCenter span{display: block; width: 296px; height: 30px;  font-size: 1.4rem; color: #fff; line-height: 28px; text-align: center; border-radius: 26px; background: #d32b2a; }
+.fursysCenter h3{margin-top: 5px; font-size: 1.8rem; font-weight: normal; text-align: right;}
+.fursysInfo{position: absolute; bottom: 0px; right: 0px; z-index: 5; width: 100%; height: 170px; }
+.fursysInfo .desc{width: 600px; height: 100%; background: rgba(0, 0, 0, .2); transition: .3s;}
+.fursysInfo p{width: 500px; height: 100px; margin: 34px auto 0; padding: 30px; background: rgba(0, 0, 0, .8); font-size: 1.4rem; color: #fff; font-weight: normal; text-align: center; line-height: 1.6;}
+.fursysInfo p b{display: block;}
+.fursysInfo #btn a{display: block; width: 150px; height: 170px; background: url(./img/siteMapBtn.jpg) no-repeat left center, #fff;}
+.fursysInfo #btn.hover a{background-image: url(./img/siteMapBtn_over.jpg);}
+.fursysInfo #btn.click a{background-image: url(./img/siteMapBtnclose.jpg);}
+
+.leftBanner>div{width: 220px; height: 220px; padding: 20px; background: url(./img/mainBanner1bg.jpg);}
+.leftBanner>div:nth-child(2){background-image: url(./img/mainBanner2bg.jpg);}
+.leftBanner>div:nth-child(3){background-image: url(./img/bg_sms.jpg);}
+.leftBanner h3{font-size: 2rem; color: #fff; line-height: 1.3;}
+.leftBanner>div:nth-child(2) h3{color: #333;}

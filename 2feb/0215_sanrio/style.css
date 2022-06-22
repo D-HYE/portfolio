@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'GowunDodum-Regular';}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer; text-indent: -9999px;}
+
+.wrap{width: 92.98%; margin: auto;}
+.plus{position: fixed; left: -3.51%; bottom: 0;}
+.plus img{width: 100%;}
+header{background: #8ed9f9; padding: 30px 0;}
+#logo a{width: 150px; margin: 0 auto 40px; padding: 0 10px;}
+#logo a img{width: 100%;}
+nav .flex{display: flex;  flex-direction: column; text-align: center;}
+nav .flex li a{position: relative; padding: 15px 0; font-size: 1.6rem; font-weight: bold; color: #4a679e;}
+nav .flex li a:after{content: ""; position: absolute; left: 0; display: block; width: 100%; height: 24px; background: url(./img/menu_bg.png) no-repeat left bottom; transition: .3s;}
+nav .flex li:hover a{color: #fff;}
+nav .flex li:hover a:after{background-position-x: right;}
+
+
+
+.title{padding: 40px 25px 40px 30px; background: url(./img/ceo_img_v1.png) no-repeat center bottom/cover;}
+.title h2{margin: 15px 0; font-size: 2.5rem; color: #4a679e;}
+.title p{width: 85%; padding: 5px 5px 10px 20px; font-size: 1.3rem; font-weight: 600; background: rgba(255, 255, 255, .5);}
+
+.list{padding: 20px 25px 20px 30px; background: url(./img/bg_shop.png) no-repeat center bottom/contain;}
+.list h3{margin: 15px 20px; font-size: 2.5rem; color: #4a679e;}
+.character{display: flex; flex-wrap: wrap; justify-content: space-between; padding: 50px 2.5%;}
+.character li{position: relative; width: 45%; height: 200px; margin-bottom: 20px; overflow: hidden; border-radius: 20px; border: 1px solid #ccc;}
+.character figure{position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: .4s;}
+.character img{width: 100%;}
+.character li figure:first-of-type{opacity: 0;}
+.character li:hover figure:last-of-type{opacity: 0;}
+.character li:hover figure:first-of-type{opacity: 1;}
+.character span{position: absolute; left: 0; bottom: 0; z-index: 1; display: block; width: 100%; height: 40px; text-align: center; line-height: 40px; font-size: 1.5rem; color: #4a679e; font-weight: bold; background: #fff; box-shadow: 0 0 4px 1px rgba(0, 0, 0, .15);}
+.btn{text-align: center; margin-bottom: 60px;}
+.btn a{display: inline-block; padding: 15px 40px; font-size: 1.5rem; font-weight: bold; color: #4a679e; background: #8ed9f9; border-radius: 30px;}
+.btn:hover a{color: #fff; background: #4a679e;}
+
+footer{padding: 20px 5% 10px; background: #333;}
+footer p{font-size: 1.3rem; color: #fff;}
+footer .copy{margin-top: 10px; color: #ccc; font-size: 1.2rem;}
+
+/* mobile */
+@media only screen and (max-width:630px){
+    .wrap{width: 100%;}
+    .inner{padding: 50px 0;}
+
+    .plus{position: absolute; left: 50%; bottom: auto; top: 80px; transform: translateX(-52.8%); width: 100%; opacity: .3;}
+    nav .flex{flex-direction: row; flex-wrap: wrap;}
+    nav .flex li{width: 50%;}
+    nav .flex li a{margin-bottom: 10px; padding: 20px;}
+    nav .flex li a:after{left: 50%; transform: translateX(-50%); width: 80%;}
+
+
+    .title{padding: 0 5% 25px;}
+    .title h2{margin: 10px 0 15px; font-size: 2rem;}
+    .title p{width: 100%; padding: 5px 5px 25px 5px;}
+    .character li{width: 45%; height: 160px;}
+}
+
+/* 601px */
+@media only screen and (min-width:631px){
+    .wrap{display: flex; justify-content: space-between;}
+    .plus{width: 25%;}
+    header{width:32.638%}
+}
+
+/* 1024px */
+@media only screen and (min-width:1024px){
+    .character li{width: 32%; height: 230px;}
+    .character span{height: 60px; line-height: 60px; font-size: 2rem;}
+}
+
+@media only screen and (min-width:1400px){
+    .wrap{position: relative; max-width: 92.98%;}
+   /* #logo{float: right;}*/
+    nav{position: absolute; top: 0; right: 0; /*float: left;*/ width: 67.362%;}
+    nav .flex{flex-direction: row; justify-content: space-between; padding: 0 30px;}
+    nav .flex li a{padding: 20px 30px; font-size: 2rem;}
+    nav .flex li:hover a{color: #4a679e;}
+    .plus{left: -5.265%; width: 35%;}
+    
+    .inner{width: 67.362%;}
+    .title{margin-top: 50px;}
+    .character.flex{justify-content: flex-start; gap: 2.5%;}
+    .character li{width: 23%; height: 200px;}
+    .character span{height: 50px; line-height: 50px; font-size: 1.8rem;}
+}

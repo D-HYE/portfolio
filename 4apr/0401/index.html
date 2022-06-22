@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ddd</title>
+    <link rel="stylesheet" href="/css/reset.css">
+
+    <style>
+        .product-select{max-width: 1200px; margin: auto; padding: 20px;}
+        ul.flex{display: flex; justify-content: center; gap: 20px;}
+        li a{padding: 10px; font-size: 2rem;}
+        li a.on{background: #333; color: #fff;}
+
+        .grid {max-width: 1200px; margin: auto;}
+
+        .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+        }
+
+        .grid-item {
+            float: left;
+            width: 300px;
+            height: 300px;
+        }
+        .grid-item img {
+            display: block;
+            max-width: 100%;
+        }
+        .grid-item--height2 { height: 600px; }
+
+    </style>
+</head>
+<body>
+    <div class="product-select">
+        <ul class="flex">
+            <li><a href="#" data-filter=".soda-item" class="on">탄산음료</a></li>
+            <li><a href="#" data-filter=".drink-item">주스</a></li>
+            <li><a href="#" data-filter=".coffe-item">커피</a></li>
+            <li><a href="#" data-filter=".tea-item">차</a></li>
+            <li><a href="#" data-filter=".funt-item">기능성</a></li>
+            <li><a href="#" data-filter=".water-item">먹는샘물</a></li>
+            <li><a href="#" data-filter=".other-item">기타</a></li>
+        </ul>
+    </div>
+    <div class="grid">
+
+        <div class="grid-item soda-item"><img src="./img/soda-item1.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item2.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item3.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item grid-item--height2"><img src="./img/soda-item4.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item5.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item6.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item grid-item--height2"><img src="./img/soda-item7.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item8.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item grid-item--height2"><img src="./img/soda-item9.jpg" alt="soda-item"></div>
+        <div class="grid-item soda-item"><img src="./img/soda-item10.jpg" alt="soda-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item1.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item grid-item--height2"><img src="./img/drink-item2.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item3.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item4.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item5.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item6.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item7.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item8.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item"><img src="./img/drink-item9.jpg" alt="drink-item"></div>
+        <div class="grid-item drink-item grid-item--height2"><img src="./img/drink-item10.jpg" alt="drink-item"></div>        
+        <div class="grid-item drink-item"><img src="./img/drink-item11.jpg" alt="drink-item"></div>        
+        <div class="grid-item coffe-item"><img src="./img/coffee-item1.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item grid-item--height2"><img src="./img/coffee-item2.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item grid-item--height2"><img src="./img/coffee-item3.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item"><img src="./img/coffee-item4.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item grid-item--height2"><img src="./img/coffee-item5.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item"><img src="./img/coffee-item6.jpg" alt="coffe-item"></div>        
+        <div class="grid-item coffe-item"><img src="./img/coffee-item7.jpg" alt="coffe-item"></div>        
+        <div class="grid-item tea-item grid-item--height2"><img src="./img/tea-item1.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item"><img src="./img/tea-item2.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item grid-item--height2"><img src="./img/tea-item3.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item"><img src="./img/tea-item4.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item"><img src="./img/tea-item5.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item grid-item--height2"><img src="./img/tea-item6.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item"><img src="./img/tea-item7.jpg" alt="tea-item"></div>        
+        <div class="grid-item tea-item"><img src="./img/tea-item8.jpg" alt="tea-item"></div>        
+        <div class="grid-item funt-item grid-item--height2"><img src="./img/funt-item1.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item2.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item3.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item4.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item5.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item grid-item--height2"><img src="./img/funt-item6.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item7.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item8.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item9.jpg" alt="funtional-item"></div>        
+        <div class="grid-item funt-item"><img src="./img/funt-item10.jpg" alt="funtional-item"></div>              
+        <div class="grid-item water-item grid-item--height2"><img src="./img/water-item1.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item2.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item3.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item4.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item5.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item6.jpg" alt="water-item"></div>              
+        <div class="grid-item water-item"><img src="./img/water-item7.jpg" alt="water-item"></div>              
+        <div class="grid-item other-item"><img src="./img/other-item1.jpg" alt="other-item"></div>              
+        <div class="grid-item other-item"><img src="./img/other-item2.jpg" alt="other-item"></div>              
+        <div class="grid-item other-item"><img src="./img/other-item3.jpg" alt="other-item"></div>              
+        <div class="grid-item other-item"><img src="./img/other-item4.jpg" alt="other-item"></div>  
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        let $grid = $('.grid').imagesLoaded( function() {
+            $grid.isotope({
+                itemSelector: '.grid-item',
+            });
+        });
+
+        $grid.isotope({filter:'.soda-item'});
+
+        $('.product-select a').on('click', function(e) {
+            e.preventDefault();
+
+            $('.product-select a').removeClass('on')
+            $(this).addClass('on')
+
+            let filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+    </script>
+</body>
+</html>

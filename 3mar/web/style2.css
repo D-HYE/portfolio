@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: ferrero;
+    src: url(./HhyIU44g9vKiM1sORYSiWeAsLN995ygxzDQhQw.woff2);
+}
+@font-face {
+    font-family: museum;
+    src: url(./국립박물관문화재단클래식L.ttf);
+}
+
+/* reset */
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #666; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #666;}
+ul, li{list-style: none;}
+button{background: none; border: none; text-indent: -9999px; cursor: pointer;}
+
+/* 공통 클래스 */
+.mobile{display: none;}
+.pc{display: none;}
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.posCent{position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+/* 헤더 */
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; border-bottom: 1px solid #D5AC5B; background: #fff; transition: .3s;}
+header .inner{max-width: 1400px; height: 100px; margin: auto; padding: 0 7.5%; transition: .3s;}
+#logo a{width: 110px; height: 70px; background: url(./img/global-logo.svg) no-repeat center/contain;}
+nav{width: 30%;}
+nav .flex{width: 100%;}
+nav li a{font-family: 'ferrero', 'sans-serif'; font-size: 2rem; color: #D5AC5B; letter-spacing: -0.18rem;}
+.bar{padding: 5px 2.5%; cursor: pointer;}
+.bar1, .bar2, .bar3 {
+    width: 35px; height: 3px; margin: 8px 0;
+    background-color: #D5AC5B; border-radius: 3px;
+}
+header .sns{width: 30%;}
+header .sns ul{padding-left: 40%;}
+/* 사이드네비 */
+.sideNav{position: fixed; top: 0; left: -60%; z-index: 20;  display: none; width: 45%; height: 100vh; padding: 100px 0; background: #fff; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3); transition: .3s;}
+.sideNav>ul{width: 100%; padding: 50px 7.5% 50px; border-top: 1px solid #2B1A15;}
+.sideNav>ul a{padding: 10px 0; font-family: 'ferrero', 'sans-serif'; font-size:  2.2rem; color: #2B1A15; letter-spacing: -0.15rem;}
+.sideNav .sns{padding: 20px 7.5% 0; border-top: 1px solid #D5AC5B;}
+.sideNav .sns ul{justify-content: flex-start; gap: 20px;}
+.close{position: absolute; top: 10px; right: 7.5%; transform: translateY(50%); width: 35px; cursor: pointer; transition: .3s;}
+.close1, .close2{width: 35px; height: 3px; margin: 8px 0; background-color: #2B1A15; border-radius: 3px;}
+.close1{transform: rotate(-45deg) translate(-3px, 9px); }
+.close2{transform: rotate(45deg) translate(2px, -4px);}
+.dim{position: fixed; top: 0; left: 0; z-index: 15; display: none; width: 100%; height: 100vh; background: rgba(0, 0, 0, .5);}
+
+
+/* 슬라이더 */
+.slideContainer{position: relative; width: 100%; height: 800px; background: url(./img/slide_image.jpg) no-repeat center bottom/cover; overflow: hidden; transition: .3s;}
+.slideContainer::after{content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); transition: .3s;}
+.slideContainer figure img{position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%;}
+.slideContainer .title{position: absolute; z-index: 5;}
+.slideContainer .title h2{font-family: 'ferrero', serif; color: #fff; font-size: 10rem; text-align: center; letter-spacing: -0.7rem; line-height: 0.85; text-indent: -7px;}
+.slideContainer .txt{position: absolute; top: 700px; z-index: 5; width: 100%; font-family: 'ferrero', serif; font-size: 3rem; font-weight: 400; line-height: 37px; text-align: center; color: #2B1A15; transition: .3s;}
+
+/* 공통 section */
+section{position: relative; width: 100%; height: 100vh; padding-top: 100px; overflow: hidden;}
+section .wrap{position: relative; width: 90%; height: calc(100% - 100px); margin: auto;}
+section .imgbox{position: absolute; transition: .3s;}
+section .imgbox img{width: 100%;}
+/* sect1 */
+#sect1{background: url(./img/bg-img.png) no-repeat left top/cover, url(./img/bg-pattern.png)}
+#sect1 .wrap{padding-top: 80px;}
+#sect1 .title h2{font-family: 'ferrero', serif; color: #2B1A15; font-size: 3.5rem; letter-spacing: -0.2rem; transition: .3s;}
+#sect1 .title h2 b{display: block; font-size: 6.5rem;}
+#sect1 .title h3{margin-top: 10px; font-family: 'museum', serif; color: #2B1A15; font-size: 2.2rem; line-height: 1.3; font-weight: 500;}
+#sect1 .content{position: absolute; bottom: 50px; right: 0; width: 100%; height: 272px;}
+#sect1 .content .desc{position: relative; width: 46.578%; height: 100%; padding: 10% 5% 0; background: rgba(255, 255, 255, .5); border: 1px solid #D5AC5B; border-radius: 20px;}
+#sect1 .content h3{font-family: 'ferrero', serif; font-size: 2.8rem; color: #D5AC5B; letter-spacing: -0.2rem; line-height: 1.2;}
+#sect1 .content h3.ko{font-family: 'museum', serif; font-weight: 400;}
+#sect1 .content h3 span{display: block;}
+#sect1 .content p{margin-top: 20px; font-size: 1.6rem; font-weight: 300; line-height: 1.2; word-break: keep-all;}
+#sect1 .content .mark{position: absolute; top: -15px; left: -21px; width: 73px; height: 57px; background: url(./img/quotation-mark-first.svg) no-repeat;}
+#sect1 .imgbox1{top: 20px; right: 2.5%; width: 25%;}
+#sect1 .imgbox2{bottom: -80px; left: -1.5%; width: 300px;}
+
+/* promotion section 공통*/
+section.product{background: url(./img/wood-pattern_x2.png);}
+section.product .txtbox{align-items: flex-start; padding: 9% 7.5% 0; margin-top: 30px;}
+section.product .bg{position: absolute; top: 0; left: 0; width: 100%; height: 55%; transition: .3s;}
+section.product .leftDesc{font-family: 'ferrero', serif;}
+section.product .leftDesc h2{font-size: 3rem; color: #fff; text-transform: uppercase; transition: .3s;}
+section.product .leftDesc a{width: 100px; height: 45px; margin-top: 35px; color: #fff; font-size: 1.5rem; text-align: center; line-height: 43px; border: 2px solid #fff; transition: .3s;}
+section.product .rightDesc{text-align: right;}
+section.product .rightDesc h3{display: none; font-family: 'museum', serif; font-size: 2rem; color: #fff; font-weight: 400; line-height: 1.3;}
+section.product .frame{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 97.657%; height: 100%; border: 1px solid #2B1A15; transition: .3s;}
+section.product .imgbox{position: absolute; top: 40%; left: 50%; transform: translateX(-50%); width: 70%;}
+.deco{position: absolute; width: 10px; height: 10px; background: #2B1A15; transform: rotate(45deg);}
+.deco1{top: -5px; left: -5px;}
+.deco2{top: -5px; right: -5px;}
+.deco3{bottom: -5px; left: -5px;}
+.deco4{bottom: -5px; right: -5px;}
+/* sect2 */
+#sect2 .bg{background: #D5AC5B;}
+/* sect3 */
+#sect3 .bg{background: #9E1400;}
+#sect3 .leftDesc a, #sect4 .leftDesc a{color: #D5AC5B; border-color: #D5AC5B;}
+#sect3 .frame, #sect4 .frame{border-color: #D5AC5B;}
+#sect3 .deco, #sect4 .deco{background: #D5AC5B;}
+/* sect4 */
+#sect4 .bg{background: #2B1A15;}
+
+/* sect5 */
+#sect5{background: #D5AC5B;}
+#sect5 h2{margin: 45px 0; font-family: 'ferrero', serif; color: #fff; font-size: 5rem; letter-spacing: -0.2rem; text-align: center; transition: .3s;}
+#sect5 h2 b, #sect5 h3 b{display: block;}
+#sect5 .frame{position: absolute; top: 0px; left: 50%; transform: translateX(-50%); width: 105%; height: 70%; border: 1px solid #fff; transition: .3s;}
+#sect5 .deco{background: #fff;}
+.mySwiper{height: 100%; padding: 30px 5%;}
+.mySwiper .swiper-slide{width: 45%; height: 100%;}
+.mySwiper .imgbox{position: inherit; width: 100%; height: 75%; overflow: hidden;}
+.mySwiper .imgbox img{width: auto; height: 130%; text-align: center;}
+#sect5 .txtbox{width: 100%; padding: 15px 1%; font-family: 'ferrero', serif; color: #2B1A15; font-size: 2.3rem; text-align: center; letter-spacing: -0.2rem;}
+
+div.swiper-button-prev, div.swiper-button-next{justify-content:flex-start; width: 45px; height: 45px; padding: 0 12px; background: #d5ac5b88; border: 2px solid #fff; border-radius: 30px; transition: .3s; }
+div.swiper-button-prev{left: 1%;}
+div.swiper-button-next{justify-content:flex-end; right: 1%;}
+div.swiper-button-prev:hover, div.swiper-button-next:hover{width: 90px; background: #2B1A15;}
+
+#sect5 > div > div > div.swiper-button-prev:after, #sect5 > div > div > div.swiper-button-next:after{color: #fff; font-size: 25px;}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{bottom: 20px;}
+div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #2B1A15;}
+
+/*footer*/
+footer{width: 100%; padding: 20px 5% 40px; background: #2B1A15;}
+footer ul{width: 80%;}
+footer ul a{padding: 5px 10px; font-size: 1.5rem; color: #fff; font-weight: 300;}
+footer ul li:first-child a{color: #D5AC5B;}
+footer p{margin-top: 20px; font-size: 1.3rem; color: #666; font-weight: 300;}
+
+/* scroll */
+section.product .wrap .txtbox>div{margin-top: 50px; opacity: 0; transition: .2s;}
+section.product .wrap .imgbox{margin-top:50px; opacity: 0; transition: .6s;}
+section.product .wrap.on .txtbox>div{margin-top: 0; opacity: 1}
+section.product .wrap.on .imgbox{margin-top: 0; opacity: 1}
+
+@media only screen and (max-width:500px){
+    .mobile{display: block;}
+    header{height: 70px;}
+    header .inner{height: 70px; padding: 0 5%;}
+    #logo a{width: 230px; background-image: url(./img/global-logo_tablet.svg);}
+    .sideNav{width: 60%; padding: 70px 0;}
+    .sideNav .close{top: 0;}
+    .slideContainer{height: 650px;}
+    .slideContainer::after{background: rgba(0, 0, 0, .5);}
+    .slideContainer figure{display: none;}
+    .slideContainer .txt{top: 550px; width: 100%; text-align: center; color: #fff; font-weight: 300;}
+
+    section{padding-top: 70px;}
+    #sect1 .wrap{padding-top: 5vh;}
+    #sect1 .title h3{font-size: 2rem;}
+    #sect1 .content{flex-direction: column; bottom: 50px; height: 300px;}
+    #sect1 .content .desc{width: 100%; height: auto; padding: 5.5% 5% 10%;}
+    #sect1 .content h3{font-size: 2.2rem;}
+    #sect1 .content h3 span{display: inline;}
+    #sect1 .content p{margin-top: 10px; font-size: 1.4rem;}
+    #sect1 .content .mark{top: -30px; left: -10px; width: 55px;}
+    #sect1 .imgbox1{display: none;}
+    #sect1 .imgbox2{bottom: -70px; left: 28%; width: 65%;}
+    section.product{height: 700px;}
+    section.product .leftDesc h2{font-size: 5vw;}
+    section.product .leftDesc a{width: 30%; height: 35px; margin-top: 30px; line-height: 32px;}
+
+    #sect5 h2{font-size: 4rem;}
+    #sect5 .frame{height: 80%;}
+    .mySwiper .swiper-slide{width: 70%;}
+    .mySwiper .imgbox{height: 80%;}
+    #sect5 .txtbox{padding: 2% 5%; margin: auto; font-size: 3rem;}
+    #sect5 .txtbox h3{overflow: hidden; text-overflow:ellipsis; white-space:nowrap; word-break: keep-all;}
+    #sect5 h3 b{display: inline;}
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{bottom: 2.5%;}
+    
+}
+
+@media only screen and (min-width:768px){
+    .sideNav{width: 35%;}
+    #sect1 .content{bottom: 0; width: 60.367%;}
+    #sect1 .content .desc{padding: 13.382% 5% 0;}
+    section.product .leftDesc h2{font-size: 2.7rem;}
+    section.product .leftDesc a{width: 120px; height: 52px; margin-top: 50px; font-size: 1.6rem; line-height: 50px;}
+    section.product .rightDesc h3{display: block; font-size: 2.6rem;}
+    section.product .imgbox{width: 450px;}
+
+    #sect5 h2 b{display: inline;}
+    #sect5 > div > div > div.swiper-button-prev:after, #sect5 > div > div > div.swiper-button-next:after{font-size: 35px;}
+    div.swiper-button-prev, div.swiper-button-next{width: 60px; height: 60px; padding: 0 15px;}
+    div.swiper-button-prev:hover, div.swiper-button-next:hover{width: 120px;}
+    #sect5 .txtbox{padding: 20px 1%; font-size: 3rem;}
+    footer ul{width: 60%;}
+}
+
+@media only screen and (min-width:1024px){
+    .pc{display: block;}
+    .bar{display: none;}
+    .sideNav{display: none;}
+
+    .slideContainer{min-height: 700px; height: 100vh;}
+    .slideContainer .title h2{font-size: 12rem;}
+    .slideContainer .txt{top: 85vh; font-size: 2.8rem;}
+    section .wrap{max-width: 1200px; padding: 0 2.5%;}
+    #sect1{background-size: contain;}
+    #sect1 .title h2{font-size: 5.5rem;}
+    #sect1 .title h2 b{font-size: 9rem;}
+    #sect1 .title h3{font-size: 2.5rem;}
+    #sect1 .content{right: 2.5%; width: 580px; height: 300px;}
+    #sect1 .content .desc{width: 270px; padding: 60px 25px 0;}
+    #sect1 .content .mark{top: -20px; width: 80px; height: 62px;}
+    #sect1 .imgbox1{top: 50px; right: -100px; width: 238px;}
+    #sect1 .imgbox2{bottom: -80px; left: -120px; width: 450px;}
+
+    /* promotion section 공통 */
+    section.product .bg{height: 467px;}
+    section.product .txtbox{padding: 0 1.5%; margin-top: 45px;}
+    section.product .leftDesc h2{font-size: 3.2rem;}
+    section.product .frame{top: 270px; left: 50%; transform: translate(-50%, 0); width: 105%; height: 40%; border: 1px solid #2B1A15; transition: .3s;}
+    section.product .imgbox{top: -50px; left: 50%; transform: translateX(-50%); width: 500px;}
+
+    div.swiper-button-prev{left: -3.5%;}
+    div.swiper-button-next{right: -3.5%;}
+
+    #sect5 h2{font-size: 6rem;}
+    .mySwiper .swiper-slide{width: 35%;}
+    .mySwiper .imgbox{height: 70%;}
+
+    footer ul{width: 40%;}
+}

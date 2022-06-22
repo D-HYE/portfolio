@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body, html{font-family: 'Noto Sans KR', sans-serif; font-size: .625em; color: #333; line-height: 1;}
+a{text-decoration: none; color: #333; font-family: 'Noto Sans KR', sans-serif;}
+ul, li{list-style: none;}
+button{padding: 0; text-indent: -9999px; border:none; border-radius: 0; background: inherit; cursor: pointer;}
+
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.wrap{margin: auto;}
+a{display: block;}
+a img, figure img{width: 100%;}
+
+.headerWrap {padding: 10px; text-align: center;}
+#logo a{width: 200px;}
+.service a{font-size: 1.5rem;}
+.service li{padding: 10px;}
+.service li:first-child{padding: 15px; background: #333; border-radius: 15px; transition: .5s;}
+.service li:first-child a{color: #fff;}
+.service li:first-child:hover{background: #ccc;}
+.service li:first-child:hover a{color: #333;}
+.service b{font-weight: normal;}
+nav ul{flex-wrap: wrap; background: #333; border-bottom: 2px solid #fff;}
+nav li{width: 49.8%; text-align: center;}
+nav li:hover{background: #000;}
+nav li a{padding: 10px 20px 10px; font-size: 1.4rem; color: #fff;}
+
+.slideContainer{width: 100%;overflow: hidden;}
+.slideWrap{width: 300%;}
+.slide{position: relative; width: 100%; height: 300px; background: url(./img/2022020810072610616386.png) no-repeat center/cover;}
+.slide::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .5);}
+.slide h3{position: absolute; top: 180px; left: 30px; color: #fff; font-size: 2rem; font-weight: normal;}
+.slide b{position: absolute; top: 150px; left: 30px; font-size: 1.5rem; color: #ccc; font-weight: normal;}
+.slide button{
+    position: absolute; left: 20px; bottom: 25px; 
+    width: 200px; height: 50px; 
+    font-size: 1.5rem; line-height: 50px; font-weight: bold; color: #555;
+    background: #fff; border: 1px solid #555; border-radius: 25px; text-indent: 0;
+}
+.slide button:hover{background: #555; color: #fff;}
+
+section{padding-top: 50px; margin: auto;}
+section h2{padding: 0 0 10px 15px; font-size: 2.5rem; border-bottom: 2px solid #333;}
+section .menu{width: 60%; padding: 15px 20px; margin: auto;}
+section .menu a{font-size: 2rem; color: #777;}
+section .menu li:first-child a{color: #333; font-weight: bold;}
+.exhList{padding: 100px 20px 0; border-top: 1px solid #777; background: rgb(245, 245, 245);}
+.exhList ul{margin: auto; flex-wrap: wrap; align-items: flex-start;}
+.exhList ul li{width: 100%; margin-bottom: 50px; transition: .5s;}
+.exhList figcaption b{font-size: 1.5rem;}
+.exhList figcaption h4{width: 80%; height: 80px; margin: 10px 0; font-size: 2rem; line-height: 1.3; /*overflow: hidden;  text-overflow: ellipsis;*/}
+.exhList figcaption span{font-size: 1.5rem;}
+.exhList figcaption i{display: block; margin-top: 10px; font-style: normal; font-size: 1.3rem; color: #777;}
+.exhList figcaption i:before{content: ""; display: inline-block;}
+
+.newsLetter>div{align-items: flex-start; padding: 60px 30px 100px; background: #eee;}
+.cont{width: 30%; padding: 20px 10px 40px; margin: auto; background: #fff; box-shadow: 0, 0, 5 ,5 #000;}
+.cont figure{width: 100%; margin-bottom: 20px;}
+.cont h3{margin-bottom: 10px; font-size: 2rem;}
+.cont span{font-size: 1.5rem; line-height: 1.5;}
+.notice{ padding: 50px 20px 100px; transition: .5s;}
+.notice h3{width: 20%; font-size: 2rem; text-align: center;}
+.notice ul{width: 80%; padding: 10px 20px; border-left: 2px solid #333;}
+.notice ul a{font-size: 1.5rem; line-height: 1.5;}
+
+footer{padding: 20px 15px 40px; background: #333;}
+.logo{width: 200px;}
+.logo img{width: 100%;}
+footer div.flex{justify-content: space-between; align-items: center; margin-bottom: 30px;}
+footer ul.flex{justify-content: flex-start;}
+footer a{padding: 7px 5px 7px 0; font-size: 1.3rem; color: #ccc;}
+footer a::after{content: "|"; padding-left: 5px;}
+footer li:last-child a::after{content: "";}
+footer address{text-align: center;}
+footer address p{color: #777; font-size: 1.3rem; font-weight: 300; font-style: normal; line-height: 1.6;}
+footer address .copy{margin-top: 20px; color: #777; font-size: 1.2rem; font-weight: 300; font-style: normal;}
+
+/*mobile*/
+@media only screen and (max-width:767px){
+    .wrap{width: 100%;}
+    .headerWrap{padding: 10px 3.75%;}
+    #logo a{width: 180px;}
+    .service li{font-size: 1.3rem; text-indent: -9999px;}
+    .service li:first-child{text-indent: 0px;}
+    .service li:first-child a b{display: none;}
+    .service li:last-child{width: 35px; height: 35px; background: url(./img/btn_totalSearch.svg) no-repeat center;}
+
+    .slide{height: 250px;}
+    .slide h3{top: 130px; left: 3.75%; font-size: 1.5rem; line-height: 1.3;}
+    .slide h3 span{display: block; font-size: 2rem;}
+    .slide b{top: 110px; left: 3.75%; font-size: 1.2rem;}
+    .slide button{left: 3.75%; width: 170px; height: 35px; font-size: 1.3rem;line-height: 34px;}
+
+    section{padding-top: 30px;}
+    section h2{padding-right: 5px; font-size: 2rem;}
+    section .menu{width: 100%;}
+    section .menu a{font-size: 1.8rem;}
+    .exhList{padding: 80px 3.75% 0;}
+    .exhList ul li{width: 49%;}
+    .exhList figcaption{padding: 10px 5px;}
+    .exhList figcaption h4{font-size: 1.5rem;}
+
+    .newsLetter>div{justify-content: flex-start; flex-wrap: wrap; gap: 5%; padding: 50px 5.333%; }
+    .cont{width: 47.5%; margin: 0 0 30px;}
+    .cont span{height: 50px;}
+    .notice{flex-direction: column; padding: 30px 5.333% 50px;}
+    .notice h3{border-bottom: 2px solid #333; line-height: 2;}
+    .notice ul{width: 100%; margin-top: 20px; border: none;}
+
+    footer{padding: 30px 5.333% 40px; background: #333;}
+    footer div.flex{flex-direction: column;}
+    footer ul.flex{justify-content: center; flex-wrap: wrap; width: 90%; margin: 15px auto;}
+    footer a{padding: 5px 10px 5px 0; font-size: 1.4rem; color: #ccc;}
+    footer a::after{content: "|"; padding-left: 10px;}
+}
+/* 768px */
+@media only screen and (min-width:768px){
+    .mobile{display: none;}
+
+    .wrap{max-width: 800px;}
+
+    .headerWrap {padding: 20px 15px 30px;}
+    .service li{margin: 0 10px;}
+    .service li:first-child{padding: 10px 25px;}
+    .service li a{line-height: 1.3;}
+    nav li{width: 16.5%;}
+    nav li a{font-size: 1.5rem;}
+
+    .exhList ul li a{display: flex;}
+    .exhList figure{width: 40%;}
+    .exhList figcaption{width: 60%; padding: 100px 10px 0 20px;}
+}
+/* 1280px */
+@media only screen and (min-width:1280px){
+    .wrap{max-width: 1400px;}
+
+    #logo a{width: 300px;}
+    .service li:first-child{padding: 10px 25px;}
+    .service a{font-size: 1.8rem;}
+    nav li a{font-size: 1.8rem;}
+
+    .slide{height: 450px;}
+    .slide h3{top: 50px; font-size: 3.5rem;}
+    .slide b{top: 100px; font-size: 1.8rem;}
+    .slide button{left: 50%; bottom: 50px; transform: translateX(-50%); width: 300px; height: 60px; border-radius: 30px; font-size: 2rem; font-weight: normal;}
+
+    section ul{width: 1000px;}
+    .exhList ul li{width: 33.333%; padding: 10px;}
+    .exhList ul li a{flex-direction: column;}
+    .exhList figure, .exhList figcaption, .exhList figcaption h4{width: 100%;}
+    .exhList figcaption{padding: 15px 10px;}
+    .newsLetter>div{padding: 80px 50px 120px;}
+    .cont{padding: 20px 20px 50px;}
+    .notice h3{font-size: 3rem;}
+    .notice ul{padding: 15px 30px;}
+    .notice ul a{font-size: 2rem;}
+
+    footer{padding: 30px 40px 50px;}
+    .logo{width: 350px;}
+    footer a{padding: 15px 10px 10px 0; font-size: 1.5rem;}
+    footer a::after{content: "|"; padding-left: 10px;}
+    footer address p{font-size: 1.4rem;}
+    footer address .copy{font-size: 1.3rem;}
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: ferrero;
+    src: url(./HhyIU44g9vKiM1sORYSiWeAsLN995ygxzDQhQw.woff2);
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif;}
+a{text-decoration: none; color: #333;}
+ul, li{list-style: none; padding-left: 0;}
+
+.flex{display: flex; justify-content: center;}
+
+nav{position: fixed; top: 50%; right: 5%; transform: translateY(-50%); z-index: 10; width: 170px; padding: 40px 20px 40px 30px; background: rgba(255, 255, 255, .8);}
+#logo a{display: block; width: 100px; margin-bottom: 15px;}
+#logo a img{width: 100%;}
+nav li a{position: relative; display: block; padding: 5px 15px; font-size: 1.4rem; color: #D5AC5B;}
+nav li a:before{content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); display: block; width: 10px; height: 3px; background: #D5AC5B;}
+nav li a:hover{color: #2B1A15; font-weight: bold;}
+nav li a:hover:before{background: #2B1A15;}
+
+#main{position: relative; width: 100%; height: 937px; padding: 0 10%; background: url(./img/bg-pattern.png) no-repeat center/cover;}
+#main .title{position: absolute; top: 13%; padding: 35px 100px 55px 30px; background: #2B1A15;}
+#main .title h2{font-size: 2rem; color: #D5AC5B; font-weight: normal; line-height: 1.1;}
+#main .title h2 b{display: block; margin-bottom: 15px; font-family: 'ferrero', serif; font-size: 5.5rem; letter-spacing: -0.3rem; text-indent: -2px;}
+#main .title h2 i{font-size: 2.5rem; font-style: normal; color: #fff;}
+#main .title p{margin-top: 35px; color: #D5AC5B; font-size: 1.8rem; font-weight: 300;}
+#main .program{margin-top: 10px;}
+#main .program li{padding: 5px 0; font-size: 1.5rem; color: #ddd;}
+#main .desc{position: absolute; bottom: 17%;}
+#main .desc h3{margin-bottom: -5px; color: #D5AC5B; font-size: 3rem;}
+#main .desc p{width: 555px; padding: 20px 50px 30px 30px; font-size: 1.5rem; line-height: 1.7; color: #fff; background: #D5AC5B;}
+
+section{position: relative; width: 100%; height: 100vh; padding: 80px 0 50px;}
+section h2{text-align: center; color: #D5AC5B; font-size: 4rem;}
+
+#sect1 .flex{position: absolute; left: 50%; transform: translateX(-50%); width: 1200px; margin: auto;}
+#sect1 .flex{justify-content: space-between; align-items: center; }
+#sect1 figure{width: 50%; padding-top: 25px;}
+#sect1 figure img{width: 100%;}
+#sect1 p{position: relative; width: 50%; margin-top: 100px; padding: 50px 50px 60px; color: #2B1A15; font-size: 1.6rem; line-height: 1.7; border: 1px solid #D5AC5B; border-radius: 20px; word-break: keep-all;}
+#sect1 p:before{content: ''; position: absolute; top: -55px; left: -20px; display: block; width: 100px; height: 78px; background: url(./img/quotation-mark-first.svg) no-repeat center/contain;}
+
+#sect2{height: auto; padding-bottom: 0; background: #D5AC5B;}
+#sect2 .flex{justify-content: space-between;}
+#sect2 h2{color: #fff; margin-bottom: 30px;}
+#sect2>div{width: 1200px; margin: auto;}
+#sect2 h3{position: relative; margin-bottom: 40px; font-size: 2.5rem;}
+#sect2 .analysis{padding: 50px 100px; text-align: center;}
+#sect2 .analysis>div{padding: 50px 0 80px;}
+#sect2 .analysis>div li{height: 120px; margin: 0 auto 10px; font-size: 1.5rem;}
+/* 문제점 */
+#sect2 .problem{width: 30%; background: #fff; border-radius: 150px;}
+#sect2 .problem h3{color: #2B1A15;}
+#sect2 .problem li{width: 120px; color: #D5AC5B; line-height: 120px; background: #2B1A15; border-radius: 50%;}
+#sect2 .mission{width: 40%; border: 2px solid #fff; border-radius: 35px;}
+#sect2 .mission h3{color: #fff;}
+#sect2 .mission li{position: relative; width: 250px; padding: 40px 30px; line-height: 1.3; text-align-last: left; background: #fff; border-radius: 5px; word-break: keep-all;}
+#sect2 .mission li span{position: absolute; top: 50%; right: 230px; transform: translateY(-50%); display: block; width: 450px; height: 15px; background: url(./img/icon_diamond_line.svg) no-repeat right center/cover;}
+/* 비교분석 */
+#sect2 .compare{width: 100%; padding: 50px 0 80px; margin-top: 50px; background: url(./img/wood-pattern_x2.png);}
+#sect2 .compare>.flex{width: 1200px; margin: auto;}
+#sect2 .company{width: 32%; padding: 20px 10px;}
+#sect2 .company figure{width: 100%; height: 288px; padding: 50px 0; text-align: center; background: #fff; border-radius: 5px; }
+#sect2 .company img{width: 80%;}
+#sect2 .company h4{margin: 5px 0 8px; font-size: 2rem; color: #2B1A15; text-align: center;}
+#sect2 .company p{width: 49%; height: 150px; padding: 30px 35px 30px 20px; font-size: 1.4rem; color: #2B1A15; background: rgba(255, 255, 255, .7); border-radius: 5px;}
+#sect2 .company p span{position: relative; display: block; padding: 0 0 5px 15px;}
+#sect2 .company p span:before{content: ''; position: absolute; top: 9px; left: 0; width: 3px; height: 3px; background: #2B1A15;}
+#sect2 .company p:last-child{color: #fff; background: #2b1a15bd;}
+#sect2 .company p:last-child span::before{background: #fff;}
+/* 목표 */
+#sect2 .goal{position: relative; width: 100%; padding: 70px 0; background: #2B1A15;}
+#sect2 .goal ul.flex{width: 1200px; margin: auto;}
+#sect2 .goal li{position: relative; padding: 30px 40px; background: #fff; border-radius: 20px;}
+#sect2 .goal li:nth-child(1){width: 40%;}
+#sect2 .goal li:nth-child(2){width: 55%; padding-right: 90px;}
+#sect2 .goal li:nth-child(1) h3{color: #D5AC5B;}
+#sect2 .goal li:nth-child(2) h3{color: #2B1A15;}
+#sect2 .goal span{width: 150px; height: 150px; border-radius: 75px; background: url(./img/target.png) no-repeat center/180%;}
+#sect2 .goal li:nth-child(1) p{width: 50%; margin-top: 40px; padding-right: 45px; font-size: 1.8rem; line-height: 1.5;}
+#sect2 .goal li:nth-child(2) p{padding-top: 20px; font-size: 1.5rem; line-height: 1.7; word-break: keep-all;}
+#sect2 .goal .line{position: absolute; top: 65px; right: 520px; display: block; width: 660px; height: 15px; background: url(./img/icon_diamond_line_g.svg) no-repeat right center/cover;}
+
+#sect3 h2{margin-bottom: 60px; color: #2B1A15;}
+#sect3 .top{display: flex; flex-wrap: wrap; gap: 2%; justify-content: center; width: 1200px; margin: auto;}
+#sect3 .top>div{width: 40%; padding: 30px 30px 40px; margin-bottom: 30px; border-radius: 20px; border: 1px solid #D5AC5B;}
+#sect3 h3{margin-bottom: 20px; font-size: 2rem; color: #2B1A15; line-height: 1;}
+#sect3 figure img{width: 100%;}
+#sect3 .top .keyword{background: #2B1A15; border: none;}
+#sect3 .keyword h3{color: #fff;}
+.keyword .flex{position: relative;}
+.keyword .flex li{position: absolute; top: 0px; width: 106px; height: 106px; font-size: 1.5rem; font-weight: bold; color: #2B1A15; line-height: 100px; text-align: center; background: #fff; border: 5px solid #2B1A15; border-radius: 50%;}
+.keyword .flex li:first-child{left: 75px;}
+.keyword .flex li:last-child{right: 75px;}
+.color>.flex{gap: 30px;}
+.color>.flex div{width: 140px; height: 140px; font-size: 1.8rem; font-weight: bold; color: #fff; line-height: 140px; text-align: center; background: #D5AC5B; border-radius: 50%;}
+.color>.flex .second{background:#2B1A15;}
+#sect3 .top .typo{width: 82%; padding: 30px 50px;}
+.typo p{margin-bottom: 20px; font-size: 1.5rem; line-height: 1.5;}
+.typo figure{width: 50%;}
+
+#sect4{background: url(./img/bg-pattern.png);}
+#sect4 h2{margin-bottom: 60px;}
+#sect4 .flex{width: 1200px; margin: auto; gap: 10%;}
+#sect4 .flex>div{width: 25%; position: relative;}
+#sect4 li{width: 250px; padding: 20px 20px; margin: 0 auto 20px; font-size: 1.6rem; text-align: center;  }
+#sect4 li.name{margin-bottom: 40px; padding: 40px 20px; font-size: 3rem; font-weight: bold; border-top-left-radius: 120px; border-top-right-radius: 120px;}
+#sect4 div li.bottom{height: 50px; margin-bottom: 0; margin-top: 40px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; background: #2B1A15;}
+
+#sect4 .main li{background: #D5AC5B; color: #fff;}
+#sect4 .main li.name{color: #2B1A15;}
+#sect4 .sub li{background: #fff; color: #D5AC5B; border: 1px solid #D5AC5B;}
+#sect4 .sub span{position: absolute; top: 90px; left: -170px; display: block; width: 230px; height: 15px; background: url(./img/icon_diamond_line.svg) no-repeat center right/cover;}
+
+#sect5{background: #2B1A15;}
+#sect5 h2{color: #fff; margin-bottom: 80px;}
+#sect5 .swiper{padding-bottom: 70px;}
+#sect5 .swiper-slide .flex{gap: 50px; margin-top: 15px;}
+#sect5 .swiper-slide a{width: 100px; padding: 5px 15px; font-size: 1.5rem; color: #fff; border: 1px solid #fff; border-radius: 20px;}
+#sect5 > div.swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span{width: 15px; height: 15px; background: #fff;}
+#sect5 > div.swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #D5AC5B;}

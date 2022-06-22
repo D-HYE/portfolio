@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+}
+
+.social li {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.social li a {
+  color: #333;
+}

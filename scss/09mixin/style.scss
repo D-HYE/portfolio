@@ -1,0 +1,16 @@
+@mixin headline{
+    position: relative; text-align: center; font-size: 3.6rem; text-transform: capitalize;
+    span{color: royalblue;}
+    &:before{
+        content: '';
+        position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 150px; height: 5px; background: #000;
+    }
+}
+
+.head{
+    @include headline();
+    span{color: red;}
+}
+.work{
+    @include headline() 
+}

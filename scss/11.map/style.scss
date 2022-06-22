@@ -1,0 +1,10 @@
+$color:(
+    font-primary:#333, font-secondary: #aaa,
+    bgc-primary: #eee, bgc-secondary: royalblue
+);
+$head-font:(
+    large: 48px, medium: 36px, small: 24px
+);
+
+body{background-color: map-get($color, bgc-primary);}
+h2{color: map-get($color, font-secondary); font-size: map-get($head-font, large);}

@@ -1,0 +1,47 @@
+.head {
+  position: relative;
+  text-align: center;
+  font-size: 3.6rem;
+  text-transform: capitalize;
+}
+
+.head span {
+  color: royalblue;
+}
+
+.head:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background: #000;
+}
+
+.head span {
+  color: red;
+}
+
+.work {
+  position: relative;
+  text-align: center;
+  font-size: 3.6rem;
+  text-transform: capitalize;
+}
+
+.work span {
+  color: royalblue;
+}
+
+.work:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background: #000;
+}

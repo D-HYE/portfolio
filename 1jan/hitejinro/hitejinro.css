@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body, html{font-size: .625em; color: #333; line-height: 1.2; letter-spacing: -0.05em; font-family: 'Noto Sans KR', sans-serif;}
+a{text-decoration: none; color: #333; font-family: 'Noto Sans KR', sans-serif;}
+ul, li{list-style: none;}
+button{padding: 0; text-indent: -9999px; border:none; border-radius: 0; background: inherit; cursor: pointer;}
+
+.clear:after{content:""; display: block; clear: both;}
+.wrap{width: 1070px; margin: auto;}
+.flex{display: flex; justify-content: space-between;}
+#wrap{padding-right: 100px;}
+
+.on{display: block;}
+
+/* 로고 헤더 */
+.headerWrap{height: 40px; background: #f5f5f5; text-align: center;}
+#logo a{display: inline-block; width: 93px; height: 40px; line-height: 40px;}
+#logo a img{width: 100%; vertical-align: middle;}
+
+/* 브랜드 메뉴 */
+.brandNav{position: fixed; top: 0; right: -100px; z-index: 10; width: 200px; height: 100vh; text-indent: -9999px; background: #2f3339;}
+.brandInner{background: url(./img/gnb_brand_menu_2.png) no-repeat 0 50px;}
+.brandInner h2{width: 100px; height: 50px; background: url(./img/gnb_brand_menu_1.png) no-repeat left;}
+.type a{position: relative; display: block; width: 100px; height: 100px; cursor: pointer; overflow: hidden;}
+@keyframes subBg{
+    from{transform:translateX(-100%);}
+    to{transform:translateX(0);}
+}
+.type>a.click::before{content: ""; position: absolute; z-index: -1; top: 0; left: 0; width: 100px; height: 100px; animation: subBg ease-in .2s;}
+.type:first-of-type a::before{background: #ffc100;}
+.type:nth-of-type(2) a::before{background: #99cc41;}
+.type:nth-of-type(3) a::before{background: #f68a0a;}
+.type:nth-of-type(4) a::before{background: #7436b5;}
+.type:nth-of-type(5) a::before{background: #2dabdf;}
+.type:nth-of-type(6) a::before{background: #ff617f;}
+.type:nth-of-type(7) a::before{background: #727272;}
+
+
+.brand{display: none; position: absolute; top: 0; right:0; z-index: 15; width: 100px; height: 100vh; padding-top: 50px; overflow: hidden;}
+.brand::before{
+    content: ""; position: absolute; z-index: -1; top: 0; right: 0; width: 100px; height: 100vh;
+    animation: subBg ease-in .3s;
+}
+.type:first-of-type .brand::before{background: #ffc100;}
+.type:nth-of-type(2) .brand::before{background: #99cc41;}
+.type:nth-of-type(3) .brand::before{background: #f68a0a;}
+.type:nth-of-type(4) .brand::before{background: #7436b5;}
+.type:nth-of-type(5) .brand::before{background: #2dabdf;}
+.type:nth-of-type(6) .brand::before{background: #ff617f;}
+.type:nth-of-type(7) .brand::before{background: #727272;}
+
+/* 맥주 */
+.type .brand li a{background: url(./img/sidenav/테라.png) no-repeat left 0;}
+.type .brand li a:hover{background-position-x: 50%;}
+.type:first-of-type .brand li:nth-child(2) a{background-image: url(./img/sidenav/하이트.png);}
+.type:first-of-type .brand li:nth-child(3) a{background-image: url(./img/sidenav/맥스.png);}
+.type:first-of-type .brand li:nth-child(4) a{background-image: url(./img/sidenav/에스.png);}
+.type:first-of-type .brand li:nth-child(5) a{background-image: url(./img/sidenav/스타우트.png);}
+
+/* 소주 */
+.type:nth-of-type(2) .brand li:nth-child(1) a{background-image: url(./img/sidenav/참이슬후레쉬.png);}
+.type:nth-of-type(2) .brand li:nth-child(2) a{background-image: url(./img/sidenav/참이슬오리지널.png);}
+.type:nth-of-type(2) .brand li:nth-child(3) a{background-image: url(./img/sidenav/진로.png);}
+.type:nth-of-type(2) .brand li:nth-child(4) a{background-image: url(./img/sidenav/일품진로.png);}
+.type:nth-of-type(2) .brand li:nth-child(5) a{background-image: url(./img/sidenav/일품진로21.png);}
+.type:nth-of-type(2) .brand li:nth-child(6) a{background-image: url(./img/sidenav/진로골드.png);}
+.type:nth-of-type(2) .brand li:nth-child(7) a{background-image: url(./img/sidenav/참이슬담금주.png);}
+
+/* 위스키 */
+.type:nth-of-type(3) .brand li:nth-child(1) a{background-image: url(./img/sidenav/더클래스.png);}
+.type:nth-of-type(3) .brand li:nth-child(2) a{background-image: url(./img/sidenav/더클래스1933.png);}
+.type:nth-of-type(3) .brand li:nth-child(3) a{background-image: url(./img/sidenav/더클래스33.png);}
+
+/* 와인 */
+.type:nth-of-type(4) .brand li:nth-child(1) a{background-image: url(./img/sidenav/프랑스.png);}
+.type:nth-of-type(4) .brand li:nth-child(2) a{background-image: url(./img/sidenav/이탈리아.png);}
+.type:nth-of-type(4) .brand li:nth-child(3) a{background-image: url(./img/sidenav/스페인.png);}
+.type:nth-of-type(4) .brand li:nth-child(4) a{background-image: url(./img/sidenav/독일.png);}
+.type:nth-of-type(4) .brand li:nth-child(5) a{background-image: url(./img/sidenav/미국.png);}
+.type:nth-of-type(4) .brand li:nth-child(6) a{background-image: url(./img/sidenav/캐나다.png);}
+.type:nth-of-type(4) .brand li:nth-child(7) a{background-image: url(./img/sidenav/칠레.png);}
+.type:nth-of-type(4) .brand li:nth-child(8) a{background-image: url(./img/sidenav/아르헨티나.png);}
+
+/* 사케 */
+.type:nth-of-type(5) .brand li:nth-child(1) a{background-image: url(./img/sidenav/키쿠스이.png);}
+.type:nth-of-type(5) .brand li:nth-child(2) a{background-image: url(./img/sidenav/다카시미즈.png);}
+.type:nth-of-type(5) .brand li:nth-child(3) a{background-image: url(./img/sidenav/마보로시.png);}
+.type:nth-of-type(5) .brand li:nth-child(4) a{background-image: url(./img/sidenav/아마노토.png);}
+
+/* 기타 주류 */
+.type:nth-of-type(6) .brand li:nth-child(1) a{background-image: url(./img/sidenav/필라이트.png);}
+.type:nth-of-type(6) .brand li:nth-child(2) a{background-image: url(./img/sidenav/이슬톡톡.png);}
+.type:nth-of-type(6) .brand li:nth-child(3) a{background-image: url(./img/sidenav/망고링고.png);}
+.type:nth-of-type(6) .brand li:nth-child(4) a{background-image: url(./img/sidenav/메로나에이슬.png);}
+.type:nth-of-type(6) .brand li:nth-child(5) a{background-image: url(./img/sidenav/자몽에이슬.png);}
+.type:nth-of-type(6) .brand li:nth-child(6) a{background-image: url(./img/sidenav/청포도에이슬.png);}
+.type:nth-of-type(6) .brand li:nth-child(7) a{background-image: url(./img/sidenav/매화수.png);}
+.type:nth-of-type(6) .brand li:nth-child(8) a{background-image: url(./img/sidenav/진로와인.png);}
+
+
+/* 메인 메뉴 */
+nav{height: 100px; background: #fff;}
+.navWrap{align-items: center;}
+.navWrap .menu{position: relative;  width: 716px;}
+.navMain{padding: 0 58px;}
+.navMain:first-of-type{padding-left: 0;}
+.navMain:last-of-type{padding-right: 0;}
+.navMain>a{display: inline-block; width: 73px; height: 100px; padding-top: 45px; background: url(https://www.hitejinro.com/assets/images/common/gnb_official_menu_4.jpg) no-repeat 0 45px; text-indent: -9999px;}
+.navMain:nth-child(2)>a{width: 120px; background-position-x: -203px;}
+.navMain:nth-child(3)>a{width: 30px; background-position-x: -450px;}
+.navMain:nth-child(4)>a{width: 145px; background-position-x: -616px;}
+
+/* 서브 메뉴*/
+.navSub{position: absolute; top: 100px; left: -22px; z-index: 3; justify-content: flex-start;}
+.navSub>li, .part{width: 150px; border-right: 1px solid rgba(255, 255, 255, .15);}
+.navSub>li{height: 270px; padding-left: 45px;}
+
+.navSub>li:last-of-type{border-right: none;}
+.part div{height: 90px; padding-left: 20px;}
+.part a, .navSub>li h3{
+    position: relative;
+    display: block; padding-top:30px;
+    font-size: 1.5rem; color: #fff; font-weight: 400;
+}
+.part a:before, .navSub>li h3:before{
+    content: '';
+    position: absolute; top: 20px; left: 0;
+    width: 25px; height: 1px; background: #b9ccfe;
+}
+.navDesc{padding-top: 15px;}
+.navDesc a{display: inline-block; padding: 3px 0 3px; font-size: 1.3rem; color: #c0d2fc;; line-height: 1.5; font-weight: 200;}
+
+.navMain:nth-child(1) .navSub>li{padding-left: 20px;}
+.navMain:nth-child(2) .navSub{margin-left: 170px;}
+.navMain:nth-child(2) .navSub>li{width: 296px;}
+.navMain:nth-child(2) .navDesc .navSns{display: block; width: 142px; height: 16px; margin-top: 30px; background: url(./img/icon_gnb_official_socialmediapng.png) no-repeat center;}
+.navMain:nth-child(2) .navDesc a:hover .navSns{background-image: url(./img/icon_gnb_official_socialmediapng_on.png);}
+.navMain:nth-child(2) .float li{float: left; width: 120px;}
+
+.navMain:nth-child(3) .navSub{margin-left: 180px;}
+.navMain:nth-child(3) .navSub>li, .navMain:nth-child(4) .navSub>li{width: 220px;}
+.navMain:nth-child(4) .navSub{flex-wrap: wrap; width: 440px;}
+.navMain:nth-child(4) .navSub{margin-left: 330px;}
+.navMain:nth-child(4) .navSub>li{height: 135px;}
+.navMain:nth-child(4) .navSub>li:nth-of-type(2){border-right: none;}
+.navMain:nth-child(4) .navSub h3>a{color: #fff; font-weight: 400;}
+.navMain:nth-child(4) li:hover>h3>a{color: #43fee9;}
+
+/* nav hover*/
+.navMain:hover>a:after{content:""; display: block; height: 3px; background: #2f90ff;}
+.part div:hover, .navSub>li:hover{background: #154af2;}
+.part div:hover a:before, .navSub li:hover h3:before{background: #43fee9;}
+.part div:hover a, .navSub li:hover h3{color: #43fee9;}
+.navDesc li:hover a{color: #43fee9;}
+
+.subWrap{display: none;}
+.navBg{display: none; position: absolute; top: 140px; left: 0; z-index: 2;  width: 100%; height: 270px; background: #1252fa;}
+
+/* service */
+.navWrap .service{width: 214px;}
+.service li{height: 18px; vertical-align: middle; line-height: 1.538; border-bottom: 1px solid #777;}
+.service a{color: #777;}
+.service li:nth-child(2){padding-left: 16px;}
+.service li:nth-child(3){margin-left: 20px; border-color: #7cbcff;}
+.service li:nth-child(3) a{color: #7cbcff;}
+.service li:nth-child(4){margin-left: 20px;}
+.service li:nth-child(4) select{color: #777; font-size: 1rem; border: none; background: none;}
+
+/* slide */
+.slideContainer{width: 500vw; height: 480px; overflow: hidden;}
+.slideWrap{justify-content: flex-start; margin-left: -100vw;}
+.slide{position: relative; right: 50px; width: 100vw; height: 480px;overflow: hidden;}
+.slide img{position: absolute; left: 50%; transform: translateX(-50%);}
+.btn.wrap{position: relative; margin-top: -480px; height: 480px;}
+.btn button{position: absolute; top: 50%; left: -55px; transform: translateY(-50%); width: 55px; height: 55px; background: url(https://www.hitejinro.com/assets/images/main/btn_main_prev.png) no-repeat center, rgba(255, 255, 255, .7); border-radius: 50%;}
+.btn button.rbtn{left: inherit; right: -55px; background-image: url(https://www.hitejinro.com/assets/images/main/btn_main_next.png);}
+
+/* main */
+.mian{height: 1020px; padding-top: 60px; background: #f4f4f4;}
+.title{margin-bottom: 30px;}
+.mainContainer ul{position: relative; width: 1070px; height: 900px;}
+.mainContainer li{position: absolute;}
+.col1{left: 0;}
+.col2{left: 270px;}
+.col3{left: 540px;}
+.col4{left: 810px;}
+.row1{top: 0;}
+.row2{top: 270px;}
+.row3{top: 540px;}
+
+.mainContainer li a{position: relative; z-index: 1; display: block; width: 260px; height: 260px; overflow: hidden;}
+.mainContainer li:nth-child(2) a{height: 530px;}
+.mainContainer li:nth-child(6) a, .mainContainer li:nth-child(8) a{width: 530px;}
+
+@keyframes leftRight{
+    from{
+        margin-left: -100%; 
+    }
+    to{
+        margin-left: 0;
+    }
+}
+@keyframes topBottom{
+    from{
+        margin-top: -100%; 
+    }
+    to{
+        margin-top: 0;
+    }
+}
+.contents a.hover span{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: rgba(4, 69, 244, .85); animation: leftRight .5s;}
+.contents:nth-child(6) a.hover span, .contents:nth-child(8) a.hover span{animation: topBottom .5s;}
+.contents a.hover span b{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: 1.4rem; color: #fff; font-weight: normal; letter-spacing: -0.1em; line-height: 1.3;}
+.contents a.hover b:after{content: url(https://www.hitejinro.com/assets/images/main/btn_hotclick_more.png); display: block; margin-top: 20px;}
+
+/* sns */
+div.sns{padding: 40px 0 110px;}
+.snsContainer li{position: relative; width: 340px; height: 100px; padding-left: 115px; margin-left: 25px;}
+.snsContainer li:first-child{margin-left: 0;}
+.snsContainer figure{position: absolute; left: 0; top: 0; width: 100px; height: 100px; border-radius: 50%; overflow: hidden;}
+.snsContainer figure img{width: 100%;}
+.snsContainer span{display: block; width: 225px; color: #777; font-size: 1.3rem; line-height: 20px;}
+.snsContainer span h4{height: 36px; color: #222; font-size: 1.4rem; line-height: 36px; letter-spacing: .025em;}
+
+/* footer */
+footer{padding-top: 50px; background: #292929; text-align: center;}
+.footerNav{margin-bottom: 50px;}
+.footerNav h3{width: 214px; margin-bottom: 15px; color: #fff; font-weight: 200; font-size: 1.5rem;}
+.footerNav .flex ul{width: 50%;}
+.footerNav ul{padding-top: 15px;}
+.footerNav ul li{margin-bottom: 10px;}
+.footerNav ul a{display: block; height: 20px; font-size: 1.3rem; color: #7b7b7b;}
+.footerInner{height: 40px; border-top: 1px solid #343434; border-bottom: 1px solid #343434;}
+.footerService a{position: relative; display: inline-block; height: 40px; padding: 0 15px; font-size: 1.2rem; color: #7b7b7b; line-height: 38px;}
+.footerService a:after{content: ""; position: absolute; top: 50%; right: 0; transform: translateY(-50%); display: inline-block; width: 1px; height: 6px; background: #7b7b7b;}
+.footerInner select{border: none; background: none; font-size: 1.3rem; color: #adadad;}
+select.selectSns{width: 160px; padding-left: 25px; border-left: 1px solid #343434; border-right: 1px solid #343434;}
+.copyright{padding: 40px 0;}
+.copyright address{height: 23px; padding-bottom: 5px; font-size: 1.1rem; color: #777; font-style: normal;}
+.copyright p{height: 23px; padding-bottom: 5px; font-size: 1.1rem; color: #777;}

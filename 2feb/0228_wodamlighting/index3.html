@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p id="demo"></p>
+    <script>
+        let login = false
+
+        while(!login){
+            let id=prompt('아이디를 입력하세요')
+            let pw=prompt('비밀번호를 입력하세요')
+
+            for(i=0; i<=5; i++){
+            
+                if(id === 'master' && pw ==='1234'){ //&&그리고
+                    alert('master님이 로그인 했습니다')
+                    break;
+                }else{
+                    alert('아이디 또는 비밀번호를 확인하세요')
+                }  
+            }
+        }
+    </script>
+</body>
+
+</html>

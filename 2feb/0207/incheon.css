@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-family: 'Noto Sans KR', sans-serif; font-size: .625em; color: #333;}
+a{text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+
+body{background: #c0e9fc;}
+.inner{max-width: 1200px; margin: auto;}
+.cloud1{position: absolute; top: 160px;  z-index: -5; animation: cAni 18s linear infinite;}
+.cloud2{position: absolute; top: 80px;  z-index: -5; animation: cAni2 25s linear infinite;}
+.cloud3{position: absolute; top: 680px;  z-index: -5; animation: cAni 25s linear infinite reverse;}
+@keyframes cAni{
+    from{left: 0;}
+    to{left: 100%;}
+}
+@keyframes cAni2{
+    from{left: -200px;}
+    to{left: 100%;}
+}
+.virus1{position: absolute; top: 180px; right: 15%; z-index: -5; animation: vir 3.5s ease-in-out infinite reverse;}
+.virus2{position: absolute; top: 50px; left: 15%; z-index: -5; animation: vir 5s ease-in-out infinite reverse;}
+@keyframes vir{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-30px);}
+    100%{transform: translateY(0);}
+}
+
+#logo{padding: 50px 0;}
+#logo a{display: block; height: 35px;}
+#logo a img{height: 100%;}
+.title{width: 60%; margin: auto;}
+.title img{width: 100%;}
+section{text-align: center; word-spacing: -1em;}
+
+.titleCont, .container{width: 94.222%; margin: auto;}
+.cont{position: relative; background: #fff; box-shadow:rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px; transition: all 0.4s ease-in-out;}
+.cont:hover{transform: perspective(31.25rem) rotateY(10deg);}
+.bar{position: absolute;top: 0;left: 50%;transform: translateX(-50%);
+    width: 50%;height: 4px;
+    background: linear-gradient(to right, #209cff, #68e0cf);
+}
+.cont figure{width: 140px; height: 140px; margin: auto;}
+.contWrap .cont figure{width: 120px; height: 120px;}
+figure img{width: 100%;}
+.cont h2{padding: 30px 0; font-size: 2rem;}
+.button{padding: 20px; font-size: 2rem;}
+.button span{color: #fff;}
+.cont .button{background: #209cff;}
+.cont:nth-child(2) .button{width: 49%; background: #ff8518;}
+.cont:nth-child(2) .button:last-child{background: #507fdc;}
+.contWrap h2 span{color: #32b9cf;}
+
+footer{background: #383838; padding: 20px;}
+footer img{margin-right: 5px; vertical-align: middle;}
+footer a, footer p{color: #b4b4b4; font-size: 1.8rem; font-weight: normal;}
+footer a{display: block; margin-bottom: 10px; font-weight: bold;}
+
+/* mobile */
+@media only screen and (max-width: 576px){
+    #logo a{height: 23px;}
+
+    .container{padding: 30px 0;}
+    .cont{padding: 10px; margin-bottom: 10px;}
+    .contWrap .cont figure{width: 80px; height: 80px;}
+    .cont h2{padding: 10px; font-size: 1.8rem;}
+    .cont .flex{display: flex; gap: 10px;}
+
+    footer img{height: 23px;}
+    footer a, footer p{font-size: 1.4rem;}
+
+}
+
+/* tablet */
+@media only screen and (min-width: 577px){
+    .flex{display: flex; justify-content: space-between;}
+
+    .title{max-width: 720px;}
+
+    .container{padding: 100px 0;}
+    .container.flex{flex-wrap: wrap;}
+
+    .container>div{width: 48%; padding: 30px;}
+    .container>div:last-child{width: 100%; padding: 0;}
+    .contWrap>.cont{justify-content: center; align-items: center; margin-top: 15px; padding: 30px;}
+    .button{padding: 15px;}
+    .contWrap .cont figure{width: 80px; height: 80px;}
+    .contWrap .cont figure{margin: 0 20px 0 0;}
+    .contWrap h2{text-align: left;}
+
+
+    
+}
+
+/* pc */
+@media only screen and (min-width: 900px){
+    body{background: url(./img/bg-header.png) no-repeat center top;}
+
+    .container>div{width: 30%; padding: 20px;}
+    .container>div:nth-child(2){width: 37%;}
+    .container>div:last-child{width: 30%;}
+    .contWrap>.cont{padding: 20px;}
+    .contWrap>.cont:first-child{margin-top: 0;}
+    .button{padding: 20px;}
+    .contWrap h2 span{display: block;}
+
+    .footerFelx{display: flex; justify-content: space-between;}
+    footer a{font-size: 2rem;}
+    
+}
+
+@media only screen and (min-width: 1200px){
+    .titleCont, .container{width: 100%;}
+    .container>div{padding: 30px;}
+    .contWrap>.cont{padding: 30px;}
+
+    footer a{font-size: 2.5rem;}
+}

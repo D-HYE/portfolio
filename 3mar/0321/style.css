@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'dabanggu';
+    src: url(./img/Typo_DabangguB.16840f6f.woff2);
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer;}
+
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.wrap{max-width: 500px; margin: auto; background: #fff;}
+
+body{background: rgb(251, 251, 251);}
+header{width: 100%; border-bottom: 1px solid #efefef;}
+header .inner{height: 60px;}
+#logo a{width: 45px; height: 45px;}
+#logo a img{width: 100%;}
+.bar{padding: 5px 2.5%; cursor: pointer;}
+.bar1, .bar2, .bar3 {
+    width: 35px; height: 5px; margin: 6px 0;
+    background-color: #d72306; border-radius: 3px;
+    transition: 0.3s;
+}
+.change .bar1 {transform: rotate(-45deg) translate(-8px, 7px); background-color: #ccc;}
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: rotate(45deg) translate(-8px, -8px); background-color: #ccc;}
+.myicon{padding: 0 2.5%; }
+.myicon button{width: 40px; height: 40px;}
+.myicon img{width: 100%;}
+
+.menu{display: none; padding: 20px 0 45px; background: #d72306;}
+.menu a{padding: 10px 5%; font-size: 2rem; color: #fff; border-bottom: 1px solid transparent;}
+.menu a:hover{border-color: rgba(255, 255, 255, .5);}
+.login{display: none; height: 200px; padding: 35px 0; background: #efefef;}
+.login .flex{justify-content: center;}
+.login>*{padding: 5px; font-size: 1.5rem;}
+.login p{width: 65px; color: #d72306; font-weight: bold;}
+.login textarea{padding: 2px 5px;}
+.login button{display: block; width: 55%; padding: 10px 0; margin: 25px auto 0; color: #fff; background: #d72306; border-radius: 3px;}
+
+.product{padding-bottom: 50px; margin-bottom: 20px; border-bottom: 1px solid #efefef;}
+.productImg{width: 90%; padding-top: 15px; margin: auto; overflow: hidden;}
+.productImg img{width: 100%;}
+.productTitle{width: 100%; padding: 15px 5%; background: #d72306; border-radius: 3px;}
+.productTitle h2{color: #fff; font-size: 2.5rem; font-weight: normal; font-family: 'dabanggu', 'sans-serif';}
+.productTitle button{width: 30px; height: 30px;}
+.productTitle button img{height: 100%; vertical-align: middle;}
+.content{display: none;}
+.productSummary{width: 100%; height: 150px; padding: 40px 5% 30px; background: #efefef;}
+.productSummary .desc{display: none;}
+.productSummary .desc.on{display: block;}
+.productSummary .desc h3{margin-bottom: 20px; font-family: 'dabanggu', 'sans-serif'; font-size: 2.2rem; font-weight: 500;}
+.productSummary .desc p{font-size: 1.4rem; line-height: 1.5;}
+.productItem{width: 100%; padding-top: 30px;}
+.productItem .flex{justify-content: flex-start; flex-wrap: wrap;}
+.productItem li{width: 33.333%; cursor: pointer; transition: .3s;}
+.productItem li a{padding: 10px 0; font-size: 1.5rem; text-align: center;}
+.productItem li.on{background: #512314;}
+.productItem li.on a{color: #fff; font-weight: bold;}
+.like p{position: relative; width: 40%; padding: 10px 30px; margin: 35px auto 0; font-size: 1.6rem; text-align: center; background: #fff; border: 1px solid #ccc; border-radius: 30px; cursor: pointer; transition: .3s;}
+.like p span{position: absolute; top: 50%; right: 13%; transform: translateY(-50%); display: block; width: 20px; height: 20px; background: url(./img/plus-solid.svg) no-repeat center;}
+.like p.on{color: #fff; background: #d72306; border-color: transparent;}
+
+.product2 .productTitle{background: #512314;}
+.product2 .productItem li.on{background: #ff8631;}
+.product2 p.on{background: #512314;}
+
+.product3{padding: 0; margin-bottom: 150px; border: none;}
+.product3 .productTitle{background: #ff8631;}
+.product3 .productItem li.on{background: #d72306;}
+
+footer{width: 100%; height: 50px; background: #333;}
+.product3 p.on{background: #ff8631;}

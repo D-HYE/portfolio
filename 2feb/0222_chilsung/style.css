@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face{font-family: MonsterratLight; src: url(./Montserrat-ExtraLight.woff);}
+@font-face{font-family: MonsterratBold; src: url(./Montserrat-Bold.woff);}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; text-indent: -9999px; cursor: pointer;}
+
+.flex{display: flex;}
+
+header{position: absolute; width: 100%; height: 100px; background: #fff;}
+.inner.flex{justify-content: space-between; align-items: center; height: 100px; min-width: 1280px; margin: auto;}
+#logo a{width: 190px; height: 48px; margin-left: 40px;}
+#logo a img{width: 100%;}
+.menu{width: 55%; padding-right: 50px;}
+.menu li{width: 16.66%;}
+.menu li a{font-size: 1.6rem; font-weight: bold;}
+.service{align-items: center; margin-right: 40px;}
+.service a{position: relative; height: 40px; padding-left: 16px; margin-left: 15px; font-size: 1.5rem; color: #888; font-weight: 300; line-height: 40px;}
+.service a::before{content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); display: block; width: 1px; height: 12px; background: #ccc;}
+.service button{display: block; width: 18px; height: 40px; background: url(./img/header_sch.png) no-repeat center;}
+.service li:last-child a{position: relative; width: 130px; padding: 0 25px 0 50px; color: #149f5c; letter-spacing: -0.04em; line-height: 38px; border-radius: 50px; border: 1px solid #ddd;}
+.service li:last-child a span{position: absolute; top: 50%; left: 27px; transform: translateY(-50%); display: block; width: 15px; height: 40px; background: url(./img/header_newsfeed.png) no-repeat center;}
+
+.main{width: 100%; height: 100vh; background: url(./img/bg.jpeg) no-repeat center/cover;}
+
+aside{ height: 81px; border-top: 1px solid #ddd;}
+aside .flex{align-items: center; width: 1024px; margin: auto;}
+aside h3{width: 106px; font-size: 1.8rem; font-weight: bold; line-height: 80px;  letter-spacing: -0.04em;}
+aside button{display: block; width: 54px; height: 40px; background: url(./img/mainCon1_news_up.png) no-repeat center;}
+aside button.down{background-image: url(./img/mainCon1_news_down.png);}
+aside .newsWrap{position: relative; width: 700px; padding: 10px; overflow: hidden;}
+aside .newsList{position: absolute; top: -80px; padding-left: 10px;}
+aside .newsList p{font-size: 1.8rem; font-weight: 300; line-height: 60px; color: #666;}
+aside .moreBtn a{width: 134px; height: 40px; margin: 20px 0; font-size: 1.6rem; color: #fff; text-align: center; line-height: 40px; background: #333; border-radius: 20px;}
+
+.brand{position: relative; width: 100%; padding-top: 150px; background: rgba(39,145,115,0.9);}
+.brand .bgvideo{position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; overflow: hidden;}
+.brand .bgvideo video{height: 100%;}
+/*
+.brand .bgvideo .bg{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(39,145,115,0.9);}
+*/
+.brand .title{position: absolute; top: 150px; width: 100%;}
+.brand h2{font-size: 24rem; font-family: MonsterratBold; color: #fff; text-align: center; line-height: 170px;}
+.brand h2 span{display: block; margin-top: 40px; font-size: 2.4rem; font-weight: normal; line-height: 1;}
+.brand .container{position: relative; z-index: 1; width: 1280px; height: 550px; padding-top: 80px; margin: 260px auto 0;}
+
+.content{position: absolute; left: 50%; transform: translateX(-50%); width: 100%; height: 100%;}
+.brand .product{position: relative; display: none; width: 1024px; height: 470px; margin: auto; padding: 60px; background: #fff;}
+.content.active .product{display: block;}
+.brand .product h3{font-size: 8rem; font-weight: 100; letter-spacing: -5px;}
+.brand .product h3 span{display: block; margin-bottom: 20px; font-size: 50px;}
+.brand .product p{margin-top: 35px; font-size: 1.8rem; color: #666; font-weight: 300; line-height: 28px;}
+.brand .product .btnWrap{position: absolute; bottom: 60px; left: 60px; display: flex;}
+.brand .product a{display: block; width: 180px; height: 60px; margin-right: 10px; font-size: 2rem; color: #fff; text-align: center; line-height: 60px; background: #149f5c; border-radius: 50px;}
+.brand img{position: absolute; top: -63px; right: -129px;}
+
+.productList{ width: 100%; margin-top: 30px; padding-bottom: 50px; border-top: 1px solid rgba(255, 255, 255, .7);}
+p.dot{position: absolute; top: -5px; left: 39px; width: 10px; height: 10px; background: #fff; border-radius: 100%;}
+.productList ul{position: relative; width: 1024px; height: 76px; margin: auto;}
+.productList li>a{padding: 36px 0 20px; margin-right: 32px; font-size: 2rem; color: rgba(255, 255, 255, .7); font-weight: 300; }
+.productList a.active{font-weight: bold; color: rgba(255, 255, 255, 1);}
+.productList .moreBtn a{margin: 10px auto 0; width: 145px; height: 40px; text-align: center; line-height: 40px; font-size: 1.6rem; background: #fff; border-radius: 50px;}
+
+.next{height: 100px; background: #000;}

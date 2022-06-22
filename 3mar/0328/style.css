@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer;}
+
+
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.mobile{display: none;}
+
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; transition: .2s; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);}
+header .inner{height: 100px; padding: 0 10%; transition: .3s;}
+header h1 a{width: 60px; height: 70px; background: url(./img/Ilkwang\ lightings_symbol.png) no-repeat center/cover;}
+header nav{width: 70%;}
+header nav li a{font-size: 1.8rem; transition: .4s;}
+header nav li.on a{font-size: 2rem; font-weight: 900;}
+
+header.bg0, header.bg5{background: #fff;}
+header.bg1{background: #286820;}
+header.bg2{background: #0d2a86;}
+header.bg3{background: #ffd8b1;}
+header.bg4{background: #111;}
+header.bg1 h1 a, header.bg2 h1 a, header.bg4 h1 a{background-image: url(./img/Ilkwang\ lightings_symbol-w.png);}
+header.bg1 nav a, header.bg2 nav a, header.bg4 nav a{color: #fff;}
+
+section{position: relative; width: 100%; height: 100vh; padding-top: 100px;}
+section .txtbox{position: absolute; top: 35%; margin-top: 50px; opacity: 0; transition: .7s;}
+section .txtbox.on{margin-top: 0;  opacity: 1;}
+section .txtbox h3{margin-bottom: 30px; font-size: 1.8rem; font-weight: 300;}
+section .txtbox h2{margin-bottom: 20px; font-size: 3rem; font-weight: normal;}
+section .txtbox h2 b{display: block; margin-top: 15px; font-size: 6.5rem; transition: .3s;}
+section .txtbox a{width: 250px; margin-top: 50px; padding: 15px; color: #fff; font-size: 1.6rem; text-align: center; border: 1px solid #fff; background-color: rgba(255, 255, 255, .2);}
+
+#sect1 .txtbox{left: 5%; top: inherit; bottom: 10%; padding-right: 10%;}
+#sect1 .imgbox{width: 100%; height: 60%; background: url(./img/main.png) no-repeat center/cover;}
+#sect1 .txtbox h2{margin-bottom: 20px; font-size: 6rem; color: #000; text-transform: uppercase;transition: .3s;}
+#sect1 .txtbox p{font-size: 1.4rem; line-height: 1.5;}
+#sect2{background: url(./img/content3.jpg) no-repeat center/cover;}
+#sect2 .txtbox, #sect4 .txtbox{left: 10%; color: #fff;}
+#sect3{background: url(./img/content2.jpg) no-repeat center/cover;}
+#sect3 .txtbox{right: 10%; color: #000; text-align: right;}
+#sect3 .txtbox a{display: inline-block; color: #000; border-color: #000;}
+#sect4{background: url(./img/content1.jpg) no-repeat center/cover;}
+#sect5{background: url(./img/lighthouse.jfif) no-repeat center/cover;}
+#sect5 .txtbox{top: 50%; left: 50%; transform: translate(-50%, -45%); width: 70%; height: 70%; transition: .5s;}
+#sect5 .txtbox h2{font-size: 6.5rem; color: #fff; font-weight: bold; word-break: keep-all;}
+#sect5 .txtbox h2 b{font-size: 6rem; font-weight: normal;}
+#sect5 .txtbox .desc{width: 65%;}
+#sect5 .txtbox p{width: 100%; padding: 7% 7% 20% 5%; font-size: 1.6rem; line-height: 1.5; background: rgba(255, 255, 255, .7); }
+#sect5 .txtbox a{padding: 15px; margin: 50px auto 0; transition: .3s;}
+
+#sect6{background: #eee;}
+#sect6 .mySwiper{margin-top: 50px; padding-bottom: 50px;}
+#sect6 .swiper-slide{position: relative; width: 80%; overflow: hidden;}
+#sect6 .imgbox{height: 70vh;}
+#sect6 .imgbox img{height: 100%;}
+#sect6 h2{position: absolute; top: 0; right: 0; padding: 2.5%; font-size: 4rem; color: #fff; background: rgba(0, 0, 0, .5);}
+#sect6 .desc{position: absolute; left: 0; bottom: -100%; width: 100%; padding: 5%; background: rgba(0, 0, 0, .5); transition: .5s;}
+#sect6 .swiper-slide:hover .desc{bottom: 0;}
+#sect6 .desc h3{margin-bottom: 20px; font-size: 4rem; color: #fff;}
+#sect6 .desc p{margin-bottom: 10px; font-size: 1.4rem; color: #fff; font-weight: 300; line-height: 1.5;}
+#sect6 .desc p.date{font-size: 2rem;}
+#sect6 > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #000;}
+
+footer{width: 100%; height: 150px; background: #666;}
+
+@media only screen and (max-width: 1024px){
+    #sect5 .txtbox{width: 90%;}
+    #sect5 .txtbox p{padding: 10% 7%;}
+}
+
+@media only screen and (max-width: 768px){
+    .pc{display: none;}
+    .mobile{display: block;}
+    header .inner{height: 70px; padding: 0 5%;}
+    header nav{width: 50px;}
+    header h1 a{width: 45px; height: 50px;}
+
+    .bar{padding: 5px 2.5%; cursor: pointer;}
+    .bar1, .bar2, .bar3 {
+        width: 35px; height: 4px; margin: 7px 0;
+        background-color: #333; border-radius: 3px;
+        transition: 0.3s;
+    }
+    header.bg1 .bar>div, header.bg2 .bar>div, header.bg4 .bar>div{background-color: #fff;}
+
+    section{padding-top: 70px;}
+    section .txtbox h2 b{font-size: 5rem;}
+    #sect1 .txtbox h2{font-size: 4.5rem;}
+    section .txtbox a{width: 200px;}
+    #sect3{background-position-x: 40%}
+    #sect4{background-position-x: 60%}
+    #sect5 .txtbox{flex-direction: column; justify-content: center; width: 85%;}
+    #sect5 .txtbox>*{width: 100%;}
+    #sect5 .txtbox h2{margin-bottom: 50px; font-size: 5.5rem; text-align: center;}
+    sect5 .txtbox h2 b{font-size: 5rem;}
+    #sect5 .txtbox .desc{width: 100%;}
+    #sect5 .txtbox p{display: none;}
+    #sect5 .txtbox a{padding: 15px 30px; margin: 30px auto 0;}
+
+    #sect6 .mySwiper{margin-top: 80px;}
+    #sect6 .imgbox{height: 70vh;}
+    #sect6 .desc h3{font-size: 3rem;}
+    #sect6 .desc p{overflow: hidden; text-overflow: ellipsis;  white-space:nowrap;}
+}

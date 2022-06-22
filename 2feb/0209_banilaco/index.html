@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banila Co</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <figure>
+        <video src="./banilaco.mp4" autoplay loop muted></video>
+    </figure>
+    <header>
+        <h1 id="logo"><a href="#"><img src="./img/logo.png" alt="banilaco"></a></h1>
+        <nav>
+            <ul>
+                <li class="mainNav"><a href="#">스킨케어</a>
+                    <ul class="subNav">
+                        <li><a href="#">스킨/토너</a></li>
+                        <li><a href="#">로션/크림/아이크림</a></li>
+                        <li><a href="#">에센스/앰플/세럼</a></li>
+                        <li><a href="#">미스트</a></li>
+                        <li><a href="#">마스크/팩</a></li>
+                    </ul>
+                </li>
+                <li class="mainNav"><a href="#">베이스</a>
+                    <ul class="subNav">
+                        <li><a href="#">파운데이션/컨실러</a></li>
+                        <li><a href="#">파우더/팩트</a></li>
+                        <li><a href="#">프라이머</a></li>
+                        <li><a href="#">하이라이터/쉐딩</a></li>
+                    </ul>
+                </li>
+                <li class="mainNav"><a href="#">립</a>
+                    <ul class="subNav">
+                        <li><a href="#">립틴트</a></li>
+                        <li><a href="#">립스틱</a></li>
+                        <li><a href="#">립밤/립케어</a></li>
+                    </ul>
+                </li>
+                <li class="mainNav"><a href="#">아이</a>
+                    <ul class="subNav">
+                        <li><a href="#">아이브로우</a></li>
+                        <li><a href="#">마스카라</a></li>
+                        <li><a href="#">아이섀도우</a></li>
+                        <li><a href="#">아이라이너</a></li>
+                    </ul>
+                </li>
+                <li class="mainNav"><a href="#">클렌징</a>
+                    <ul class="subNav">
+                        <li><a href="#">클렌징 밤</a></li>
+                        <li><a href="#">클렌징 폼/워터/티슈</a></li>
+                        <li><a href="#">립&아이 리무버</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <h2>다들 뭐 사지?<span>바닐라코 베스트</span></h2>
+        <div class="btn">
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>
+        </div>
+        <div class="brand">
+            <div class="move">
+                <button class="lbtn">왼쪽</button>
+                <div class="slide">
+                    <ul class="cont">
+                        <li><a href="#"><img src="./img/clean_it_zero.png" alt="clean it zero"></a></li>
+                        <li><a href="#"><img src="./img/110951_ID0201_17125_1.png" alt="cc크림"></a></li>
+                        <li><a href="#"><img src="./img/505_ID0201_17733_1.png" alt="세럼"></a></li>
+                        <li><a href="#"><img src="./img/111011_ID0201_12999_1.png" alt="치크"></a></li>
+                    </ul>
+                </div>
+                <div class="bg">
+            </div>
+        </div>
+        </div>
+    </aside>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('li.mainNav').mouseenter(function () {
+                $('li.mainNav').removeClass('on');
+                $(this).addClass('on');
+            }).mouseleave(function () {
+                $(this).removeClass('on');
+            })
+
+            $('.cont li').removeClass('best')
+            $('.cont li').eq(0).addClass('best')
+
+            $('.lbtn').click(function () {
+
+                $('.cont').animate({ marginLeft: -200 }, function () {
+                    $('.cont li').eq(0).appendTo('.cont')
+                    $('.cont li').removeClass('best')
+                    $('.cont li').eq(0).addClass('best')
+                    $('.cont').css({ marginLeft: 0 })
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

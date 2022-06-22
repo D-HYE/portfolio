@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'YUniverse-B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer;}
+
+.flex{display: flex;}
+.txtbox{display: none;}
+.txtbox p{display: none;}
+.videobox{display: none;}
+
+header{width: 100%; height: 80px; background: #000;}
+#logo a{height: 80px; padding: 20px 0; text-align: center;}
+#logo a img{height: 100%;}
+
+section{width: 100vw; background: #000;}
+article{position: relative; flex: 1; height: calc(100vh - 80px); overflow: hidden; transition: .5s;}
+article:hover{flex: 4;}
+article .videobox{position: relative; width: 100%; height: 70%; }
+article .videobox video{position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%;}
+article .title{position: absolute; top: 20px; left: 0; width: 100%; padding: 0 3.5%; z-index: 10; height: 12vw; color: #fff;}
+article .title h2{font-family: 'YUniverse-B'; font-size: 3.2vw; font-weight: 500; line-height: 1.2; word-break: keep-all; letter-spacing: -0.2rem;}
+article .title h3{position: absolute; top: 12vw; font-size: 2rem; font-weight: 300; vertical-align: top; word-break: keep-all;}
+article .imgbox{width: 100%; height: 100%; background: url(./nctdream.jfif) no-repeat center/cover;}
+.redvelvet .imgbox{background-image: url(./redvelvet.jfif);}
+.teayeon .imgbox{background-image: url(./taeyeon.jfif);}
+.kyuhyun .imgbox{background-image: url(./kyuhyun.jfif);}
+article .imgbox::after{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .5);}
+article .txtbox{height: 30%; padding: 4% 2.5%; background: #000;}
+article .txtbox p{padding-right: 7.5%; font-size: 1.4rem; color: #666; line-height: 1.3;}
+article .txtbox p.writer{margin-bottom: 20px; color: #fff; font-size: 1.5rem; font-weight: 300; line-height: 1.5;}
+
+/*
+article.active .imgbox{display: none;}
+article.active .videobox{display: block;}
+article.active .txtbox{display: block;}
+*/

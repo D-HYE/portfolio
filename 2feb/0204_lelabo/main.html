@@ -1,0 +1,60 @@
+<body>
+    <div class="container wrap">
+        <div class="slideWrap">
+            <!--
+                <div class="locate">
+                    <h3>STORE LOCATOR</h3>
+                    <ul>
+                        <li><a href="#">LE LABO SEOUL - ITAEWON</a></li>
+                        <li><a href="#">LE LABO SEOUL - GAROSUGIL</a></li>
+                        <li><a href="#">SEOUL - SHILLA I-PARK DUTY FREE</a></li>
+                    </ul>
+                </div>
+            -->
+            <div class="slide flex">
+                <figure class="lelabo"></figure>
+                <figcaption>
+                    <h3>ABOUT LE LABO</h3>
+                    <p>freshly formulated and personalized since 2006</p>
+                </figcaption>
+            </div>
+            <div class="slide flex">
+                <figure class="matcha"></figure>
+                <figcaption>
+                    <h3>THE MATCHA26</h3>
+                    <p>introducing our new creation</p>
+                </figcaption>
+            </div>
+            <div class="slide flex">
+                <figure class="diffuser"></figure>
+                <figcaption>
+                    <h3>SMALL HOME DIFFUSER</h3>
+                    <p>reclaimed rewood, handcrafted in Brooklyn, New York</p>
+                </figcaption>
+            </div>
+            <div class="slide flex">
+                <figure class="bhf"></figure>
+                <figcaption>
+                    <h3>BODY - HAIR - FACE</h3>
+                    <p>plant-based, cruelty-free</p>
+                </figcaption>
+            </div>
+            <button class="lbtn">left</button>
+            <button class="rbtn">right</button>
+        </div>
+    </div>
+    <script>
+        $('.slide').hide();
+        $('.slide').eq(1).show();
+        $('.lbtn').click(function(){
+            $('.slide').eq(1).fadeOut();
+            $('.slide').eq(0).fadeIn();
+            $('.slide:last').prependTo('.slideWrap');
+        });
+        $('.rbtn').click(function(){
+            $('.slide').eq(1).fadeOut();
+            $('.slide').eq(2).fadeIn();
+            $('.slide:first').appendTo('.slideWrap');
+        });
+    </script>
+</body>

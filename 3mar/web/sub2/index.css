@@ -1,0 +1,106 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700;900&display=swap');
+
+@font-face {
+    font-family: en;
+    src: url(./HhyIU44g9vKiM1sORYSiWeAsLN995ygxzDQhQw.woff2);
+}
+@font-face {
+    font-family: kr;
+    src: url(./국립박물관문화재단클래식L.ttf);
+}
+
+
+h2{color: #D5AC5B; font-size: 30px; font-family: 'kr';}
+/* 공통 클래스 */
+.mobile{display: none;}
+.pc{display: none;}
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.posCent{position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+/* 헤더 */
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; border-bottom: 1px solid #D5AC5B; background: #fff; transition: .3s;}
+header .inner{max-width: 1400px; height: 100px; margin: auto; padding: 0 7.5%; transition: .3s;}
+#logo a{width: 110px; height: 70px; background: url(./img/global-logo.svg) no-repeat center/contain;}
+nav{width: 30%;}
+nav .flex{width: 100%;}
+nav li a{font-family: en, 'sans-serif'; font-size: 20px; color: #D5AC5B; letter-spacing: -0.18px;}
+.bar{padding: 5px 2.5%; cursor: pointer;}
+.bar1, .bar2, .bar3 {
+    width: 35px; height: 3px; margin: 8px 0;
+    background-color: #D5AC5B; border-radius: 3px;
+}
+header .sns{width: 30%;}
+header .sns ul{padding-left: 40%;}
+
+.mainbanner{height: 67.9vh; background: url(./img/59038.jpg);background-size: cover;background-position: center; background-repeat: no-repeat; margin-bottom: 80px;}
+
+.wrap{max-width: 1200px; margin: auto; padding: 0 24px;}
+
+
+span.gold{font-weight: bold; color: #D5AC5B; cursor: pointer}
+
+.highlight{margin: 160px 0 ;}
+.highlight p{text-align: center; font-size: 36px; color: #999; margin-bottom: 10px;}
+.highlight p.line{text-decoration: underline; color: #333; font-weight: bold;}
+
+ul.menu{padding:300px 0 24px 0; background: url(./img/gfr-10_1-1.jpg); background-position: center; background-size: cover;  display: flex; justify-content: space-between; border-radius: 20px; overflow-x: scroll;}
+ul.menu li {background-color: rgba(255,255,255,.5); width: 23%; min-width: 238px; margin: 0 24px; border-radius: 10px;padding: 24px;padding-top: 80px; font-size: 20px;font-weight: bold;}
+ul.menu li:hover{background-color: rgba(255,255,255,.8);cursor: pointer; ;}
+ul.menu li.on{background-color: #fff;}
+
+ul.menuContent{padding: 80px 0;}
+ul.menuContent h3{padding-bottom: 24px; color: #D5AC5B; }
+ul.menuContent li img{width: 100%; padding-bottom: 30px;}
+
+ul.menuContent li.content{display: none;}
+ul.menuContent li.on {display: block;}
+
+.tabWrap{flex-wrap: wrap; }
+
+.con{padding: 30px; margin-bottom: 30px; border: 1px solid #D5AC5B; width: 48%; text-align: center; border-radius: 10px;}
+.con img{width: 100%;}
+.con h3{padding-top: 40px}
+
+footer{width: 100%; padding: 20px 5% 40px; background: #2B1A15;}
+footer ul{width: 80%;}
+footer ul a{padding: 5px 10px; font-size: 15px; color: #fff; font-weight: 300;}
+footer ul li:first-child a{color: #D5AC5B;}
+footer p{margin-top: 20px; font-size: 13px; color: #666; font-weight: 300;}
+
+
+/* ------------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+    .mobile{display: block;}
+    header{height: 70px;}
+    header .inner{height: 70px; padding: 0 5%;}
+    #logo a{width: 230px; background-image: url(./img/global-logo_tablet.svg);}
+    .sideNav{width: 60%; padding: 70px 0;}
+    .sideNav .close{top: 0;}
+}
+
+/* ------------------------------------------------------- */
+@media only screen and (min-width: 601px) {
+
+    .con{width: 30%;}
+    footer ul{width:60%;}
+
+
+}
+
+/* ------------------------------------------------------- */
+@media only screen and (min-width: 1024px) {
+    .pc{display: block;}
+    .bar{display: none;}
+    .sideNav{display: none;}
+
+    ul.menuContent li{ justify-content: space-between;}
+    ul.menuContent li.on{display: flex; }
+
+    ul.menuContent li img{width: 48%;}
+    ul.menuContent li .desc{width: 48%;}
+
+    .tabWrap{justify-content: space-around;}
+    .con{width: 23%;}
+    footer ul{width: 40%;}
+}

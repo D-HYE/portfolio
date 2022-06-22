@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        form >*{display: block; margin: 5px 0 5px 10px;}
+        input[type = 'text']{padding: 5px;}
+        input[type = 'submit']{padding: 5px 15px}
+
+        ul.sns li{
+            display: inline-block; width:60px; height: 48px; 
+            background: url(./img/social_icons.png); cursor: pointer; transition: .5s;
+        }
+        ul.sns li:hover{background-position-y: -58px;}
+        ul.sns li.face{background-position-x:  -60px;}
+        ul.sns li.link{background-position-x:  -120px;}
+    </style>
+</head>
+<body>
+    <form action="insert.php">
+        <input type="text" placeholder="이름입력">
+        <input type="text" placeholder="Email">
+        <textarea cols="30" rows="5"></textarea>
+        <input type="submit" value="입력">
+        <input type="checkbox" id ="like" name="name">
+        <label for="like">여행</label>
+        <select id="cars">
+            <option value="dd">dd</option>
+        </select>
+    </form>
+
+    <ul class="sns">
+        <li class="twitter"></li>
+        <li class="face"></li>
+        <li class="link"></li>
+    </ul>
+</body>
+</html>

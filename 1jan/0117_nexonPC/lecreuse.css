@@ -1,0 +1,74 @@
+body{background: #eef1f2;}
+header{height: 100px; border-bottom: 5px solid #000; background: #f87d18;}
+.inner{display: flex; justify-content: space-between; width: 1200px; margin: auto;}
+#logo{width: 250px; height: 46px; margin-top: 27px;}
+#logo img{height: 100%;}
+header .inner ul{display: flex;}
+header .inner ul li{width: 84px; height: 60px; margin: 35px 0 0 70px; padding-right: 40px; background: url(./le_img/bg_gnb.png) no-repeat; text-indent: -9999px;}
+header .inner ul li:hover{background-position-y: -69px;}
+header .inner ul li:nth-child(2){background-position-x: -92px;}
+header .inner ul li:nth-child(3){width: 132px; background-position-x: -187px;}
+header .inner ul li:nth-child(4){background-position-x: -329px;}
+
+
+.wrap{width: 1200px; margin: auto; padding: 42px 0 40px; border-bottom: 5px solid #003e7c;}
+main ul{display: flex; flex-wrap: wrap;}
+main>ul>li{width: 226px; height: 206px; margin: 0 17px 17px 0; background: url(./le_img/product_1.png); transition: .5s;}
+main>ul>li:hover{background-position-y: -206px;}
+main>ul>li:nth-child(2){background-image: url(./le_img/product_2.png);}
+main>ul>li:nth-child(3){background-image: url(./le_img/product_3.png);}
+main>ul>li:nth-child(4){background-image: url(./le_img/product_4.png);}
+main>ul>li:nth-child(5){width: 469px; padding: 30px; background-image: none; background: #fff;}
+main>ul>li:nth-child(6){background-image: url(./le_img/product_6.png);}
+main>ul>li:nth-child(7){background-image: url(./le_img/product_7.png);}
+main>ul>li:nth-child(8){background-image: url(./le_img/product_8.png);}
+main>ul>li:nth-child(9){width: 469px; background-image: url(./le_img/promotion.png);}
+main>ul>li:last-child{background-image: url(./le_img/product_10.png);}
+
+main>ul>li:nth-child(5) h3{font-size: 2.5rem; margin-bottom: 15px;}
+ul.notice li{position: relative; width: 409px; height: 28px;}
+ul.notice a{font-size: 1.4rem; color: #333;}
+ul.notice a:hover{text-decoration: underline;}
+ul.notice li:first-child a{font-weight: bold;}
+ul.notice span{position: absolute; right: 0; top: 0; font-size: 1.3rem; color: #666;}
+
+/* login */
+.loginWrap{display: flex; align-items: center;}
+.login{margin-right: 10px;}
+input[type='text']{width: 288px; padding: 14px 25px; font-size: 15px; color: #000; font-weight: 600; border: 1px #d7d7d9 solid;}
+.idInfo{display: flex; justify-content: space-between; align-items: center; height: 26px; margin: 20px 0; }
+.idInfo div label{font-size: 1.3rem;}
+.idInfo div:first-of-type label{font-weight: bold; color: #003e7c;}
+.idInfo ul li{display: inline-block;}
+.idInfo ul li:after{content: '|'; margin: 0 6px}
+.idInfo ul li:last-of-type:after{content: ''; margin: 0;}
+.idInfo ul li a{font-size: 1.3rem;}
+.idInfo ul li:first-of-type a{font-weight: bold; color: #003e7c;}
+aside>p{height: 40px; padding: 10px 12px 0 20px; margin-bottom: 18px; font-size: 1.6rem; background: #dcdcdc;}
+aside>p>span{margin-right: 20px; font-size: 1.6rem;}
+aside>p>span:before{
+    content: ''; 
+    display: inline-block; 
+    width: 17px; height: 19px; margin-right: 10px;
+    vertical-align: middle; background: url(./le_img/bg_ip.gif) no-repeat center/contain}
+
+.promo{position: relative;width: 100%; height: 652px; background: url(./le_img/promotion2.png) no-repeat center/cover;}
+.promo button{
+    position: absolute; top: 0; right: 67px; 
+    width: 66px; height: 66px; 
+    background: url(./le_img/btn_rolling_arrow.gif) no-repeat left/cover;text-indent: -9999px; cursor: pointer;
+}
+.promo button:last-of-type{right: 0; background-position-x: right;}
+.promo p{position: absolute; bottom: 0; left: 0; width: 100%; height: 88px; padding: 19px 30px; font-size: 1.4rem; color: #fff; background: #003e7c;}
+.promo span{display: block; margin-bottom: 10px; font-size: 1.6rem; font-weight: bold;}
+
+footer .inner{justify-content: start;}
+footer .logo{width: 250px; height: 160px; padding: 78px 0 45px;}
+footer .logo img{width: 100%;}
+.footerMenu{width: 950px; padding: 18px 0 19px; margin-bottom: 30px; border-bottom: 1px solid #bbb;}
+.footerMenu span{font-size: 1.4rem;}
+.footerMenu span:after{content:'|'; margin: 0 30px;}
+.footerMenu span:first-of-type{font-weight: bold;}
+.footerMenu span:last-of-type:after{content: ''; margin-right: 0;}
+footer p{margin-bottom: 15px; font-size: 1.4rem; line-height: 1.6;}
+footer p a{font-size: 1.4rem; font-weight: bold;}

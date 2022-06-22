@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우담라이팅</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header class="flex">
+        <h1 id="logo"><a href=""><img src="./img/woodam lighting_(주)우담라이팅.png" alt="우담라이팅"></a></h1>
+        <ul class="flex">
+            <li class="mainNav"><a href="#">회사소개</a>
+                <ul class="suvNav">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">우담소개</a></li>
+                    <li><a href="#">대표자인사말</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">조직도</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </li>
+            <li class="mainNav"><a href="#">제품소개</a>
+                <ul class="suvNav">
+                    <li><a href="#">LED 가로등기구</a></li>
+                    <li><a href="#">LED 보안등기구</a></li>
+                    <li><a href="#">LED 터널등기구</a></li>
+                    <li><a href="#">LED 투광등기구</a></li>
+                    <li><a href="#">LED 경관조명등기구</a></li>
+                    <li><a href="#">LED 태양광공원등</a></li>
+                    <li><a href="#">LED 실내등기구</a></li>
+                </ul>
+            </li>
+            <li class="mainNav"><a href="#">인증및수상</a>
+                <ul class="suvNav">
+                    <li><a href="#">인증현황</a></li>
+                    <li><a href="#">수상내역</a></li>
+                </ul>
+            </li>
+            <li class="mainNav"><a href="#">포트폴리오</a>
+                <ul class="suvNav">
+                    <li><a href="#">등기구</a></li>
+                    <li><a href="#">등주</a></li>
+                    <li><a href="#">경관조명</a></li>
+                    <li><a href="#">태양광공원등</a></li>
+                    <li><a href="#">실내등</a></li>
+                </ul>
+            </li>
+            <li class="mainNav"><a href="#">고객센터</a>
+                <ul class="suvNav">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">제품문의</a></li>
+                    <li><a href="#">홍보자료</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section class="sect1"></section>
+    <section class="sect2">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/portfolio_1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/portfolio_2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/portfolio_3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/portfolio_4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/portfolio_5.jpg" />
+              </div>
+            </div>
+
+            <nav>
+                <span></span>
+                <ul>
+                    <li class="on"><a href="#">등기구</a></li>
+                    <li><a href="#">등주</a></li>
+                    <li><a href="#">경관조명</a></li>
+                    <li><a href="#">태양광공원등</a></li>
+                    <li><a href="#">실내조명</a></li>
+                </ul>
+            </nav>
+            <div class="desc">
+                <h2>| Portfolio |</h2>
+                <h3>우담의 기술력이 미래를 만듭니다.</h3>
+                <p>청계천 전구간 가로등 설치, 수원 월드컵경기장 경관조명,
+                    금산군 약초 특화거리 조명설계 및 가로등 설치 외 다수의
+                    프로젝트 수행으로 다양한 경험과 실력을 쌓아, 2007년
+                    (주)우담라이팅으로 상호 변경 후 양평군 가로등 및 보안등
+                    설치, 정읍시 가로등 설치, 서울 천호로 가로등 설치,
+                    세종로 가로등 설치 외 다수의 프로젝트를 수행하였으며,
+                    ESCO 사업으로 강원 정선군, 전남 보성군, 전남 신안군,
+                    경기 고양시, 충남 아산시 등 많은 납품을 하였습니다.</p>
+            </div>
+          </div>
+    </section>
+    <section class="sect3">
+        <div class="flex">
+            <div class="bg1">
+                <div class="product"></div>
+            </div>
+            <div class="bg2"></div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        $('.suvNav').hide();
+        $('.mainNav').mouseenter(function(){
+            $(this).find('.suvNav').stop().slideDown()
+        }).mouseleave(function(){
+            $(this).find('.suvNav').stop().slideUp()
+        })
+
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          direction: "vertical",
+          autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+
+        swiper.on('slideChange', function () {
+            let idx = swiper.activeIndex
+            $('nav li').removeClass('on')
+            $('nav li').eq(idx).addClass('on')
+        });
+
+        $('nav li').click(function(e){
+            e.preventDefault()
+            $('nav li').removeClass('on')
+            $(this).addClass('on')
+
+            let idx = $(this).index()
+            swiper.slideTo(idx, 500)
+        })
+      </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; text-indent: -9999px; cursor: pointer;}
+
+.flex{display: flex;}
+header{width: 100%; height: 88px;}
+header .inner{justify-content: space-between; width: 980px; margin: auto;}
+nav{width: 700px;}
+nav .mainNav{position: relative; height: 88px;}
+
+
+
+nav .mainNav>a{width: 128px; height: 100%; text-indent: -9999px; background: url(./img/topmenu.gif) no-repeat;}
+nav .m02>a{width: 104px; background-position-x: -128px;}
+nav .m03>a{width: 143px; background-position-x: -237px;}
+nav .m04>a{width: 112px; background-position-x: -380px;}
+nav .m05>a{background-position-x: -492px;}
+nav .m06>a{width: 79px; background-position-x: -620px;}
+nav .subNav{display: none; position: absolute; left: -61px; top: 55px; z-index: 10; width: 800px; padding-top: 28px; transition: .5s;}
+nav .subNav.on{top: 60px;}
+nav .subNav ul{background: #292043;}
+nav .subNav span{position: absolute; top: 23px; left: 72px; display: block; width: 100px; height: 5px; background: #292043;}
+nav .m02 .subNav{left: -100px; width: 500px;}
+nav .m02 .subNav span{left: 112px; width: 80px;}
+nav .m03 .subNav{left: -5px; width: 230px;}
+nav .m03 .subNav span{left: 13px; width: 118px;}
+nav .m04 .subNav{left: -140px; width: 400px;}
+nav .m04 .subNav span{left: 141px; width: 98px;}
+nav .m05 .subNav{left: -40px; width: 200px;}
+nav .m05 .subNav span{left: 50px;}
+nav .m06 .subNav{left: -265px; width: 380px;}
+nav .m06 .subNav span{left: 270px; width: 60px;}
+nav .subNav a{height: 40px; padding: 0 15px; font-size: 1.2rem; color: #a6a2b4; line-height: 40px;}
+nav .subNav a:hover{color: #fff;}
+
+.slide{position: relative;}
+#mainBg{width: 100%; height: 542px; margin: auto;}
+#mainBg .swiper{width: 980px; z-index: 0;}
+.mainbg0{background: url(./img/mainbg01.gif);}
+.mainbg1{background: url(./img/mainbg02.gif);}
+.mainbg2{background: url(./img/mainbg03.gif);}
+#subBg{position: relative; width: 100%; height: 120px;}
+.subbg0{background: url(./img/mainbg01_b.gif);}
+.subbg1{background: url(./img/mainbg02_b.gif);}
+.subbg2{background: url(./img/mainbg03_b.gif);}
+
+#mainBg .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{width: 20px; height: 20px; background: #fff;}
+#mainBg .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 120px; left: -421px;}
+
+aside{position: absolute; top: 0; left: 50%; transform: translateX(-490px); width: 880px; height: 100%; margin-left: 100px;}
+aside .swiper{position: absolute; top: 75px; right: 0; width: 245px; height: 301px; background: url(./img/슈퍼캠프코리아.png) no-repeat; padding: 26px 0 40px;}
+aside .swiper-slide{width: 245px; height: 245px; overflow: hidden;}
+aside .swiper-slide img{width: 100%;}
+body > section > div.slide > aside > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{bottom: -1px; left: 92px;}
+body > section > div.slide > aside > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span{width: 25px; height: 25px; margin: 0; border-radius: 0px; background: #000;}
+body > section > div.slide > aside > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #fff;}
+
+.wrap{position: relative; width: 980px; margin: -263px auto 0;}
+.mainYoutube li{width: 25%; height: 125px; text-align: center;}
+.mainYoutube li a{position: relative; width: 100%; height: 100%; background: url(./img/mqdefault.jpg) no-repeat center/cover; border-top: 7px solid blue;}
+.mainYoutube li a img{transition: .3s;}
+.mainYoutube li a:after{content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, .5); opacity: 0; transition: .3s;}
+.mainYoutube li a:hover:after{opacity: 1;}
+.mainYoutube li a:hover img{transform: scale(1.1);}
+.mainYoutube li:nth-child(2) a{background-image: url(./img/mqdefault1.jpg); border-color: red;}
+.mainYoutube li:nth-child(3) a{background-image: url(./img/mqdefault2.jpg); border-color: #00afff;}
+.mainYoutube li:nth-child(4) a{background-image: url(./img/mqdefault3.jpg); border-color: yellow;}
+.mainYoutube li h4{position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 5; width: 100%; color: #fff; font-size: 1.4rem; font-weight: normal;}
+.mainCont{flex-wrap: wrap;}
+.mainCont>div{position: relative; width: 25%; height: 245px;}
+.cont1{background: url(./img/main_movieplay.gif);}
+.cont1 span{display: block; width: 100%; height: 100%; background: url(./img/EBS\ 다큐프라임에\ 소개된\ 슈퍼캠프\ 관련\ 영상.png) no-repeat center right; transition: .5s;}
+.cont2{background: url(./img/SUPERCAMP\ Programs.gif) no-repeat center top; transition: .5s;}
+.cont3{background: url(./img/Quantum-U.gif) no-repeat center left; transition: .5s;}
+.cont2 ul, .cont3 ul{position: absolute; left: 30px; bottom: 30px;}
+.cont2 a, .cont3 a{font-size: 1.4rem; color: #fff; font-weight: 100; line-height: 1.5;}
+.cont2 li a:hover, .cont3 li a:hover{color: yellow;}
+.cont4, .cont5{background: #fff;}
+.cont4>div{position: relative; height: 50%;}
+.cont4 .borad{background: #f4f4f4;}
+.cont4 h4, .cont5 h4{padding: 20px 20px 10px; font-size: 1.4rem;}
+.cont4 li{width: 180px; padding: 0 20px; font-size: 1.2rem; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.cont4 a, .cont5 a, .cont8 a{position: absolute; top: 0; right: 0; opacity: .2; transition: .5s;}
+.cont4 a:hover, .cont5 a:hover, .cont8 a:hover{opacity: .4;}
+.cont5 .photo{flex-wrap: wrap; justify-content: space-between; padding: 0 20px;}
+.cont5 .photoframe{position: relative; width: 32%; height: 54px; margin-bottom: 5px; overflow: hidden;}
+.cont5 .photoframe img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 150%; filter: grayscale(1); transition: .3s;}
+.cont5 .photoframe:hover img{width: 160%; filter: grayscale(0);}
+.cont6{background: url(./img/슈퍼캠프자료\ Resources.gif) no-repeat left; transition: .5s;}
+.cont7{background: url(./img/Application\ 신청양식\ 다운로드\ 및\ 제출\ 안내.gif) no-repeat top; transition: .5s;}
+.cont8>div{height: 50%;}
+.cont8 .call{background: url(./img/고객상담센터\ 전화번호\ 1855-0783.jpg) center/cover;}
+.cont8 .contact{position: relative; background: url(./img/Contact\ us.gif) no-repeat left/cover; transition: .5s;}
+
+.cont1:hover span{background-position-x: left;}
+.cont2:hover, .cont7:hover{background-position-y: bottom;}
+.cont3:hover, .cont6:hover, .cont8 .contact:hover{background-position-x: right;}
+
+.banner{position: relative;}
+.bannerswiper{border: 1px solid #ddd; border-bottom: 7px solid #292043;}
+.banner .swiper-slide{border-left: 1px solid #ddd;  filter: grayscale(1); transition: .3s;}
+.banner .swiper-slide:hover{filter: grayscale(0);}
+body > section > div.wrap > div.banner > div:after{color: #292043;}
+body > section > div.wrap > div.banner > div.swiper-button-prev{left: -50px;}
+body > section > div.wrap > div.banner > div.swiper-button-next{right: -50px;}
+
+footer{position: relative; width: 980px; height: 130px; padding: 20px; margin: auto;}
+.copyright{margin-left: 50px; margin-top: 10px;}
+.copyright li a{margin-left: 10px; padding-right: 10px; font-size: 1.2rem; font-weight: bold; border-right: 1px solid #ddd;}
+.copyright li:last-child a{border: none;}
+.address{margin: 10px 0 0 10px;}
+.address p{font-size: 1.2rem; color: #666; font-weight: normal; line-height: 1.5;}
+.copy{margin: 10px 0 0 10px; font-size: 1.1rem; color: #666;}
+.sns{align-items: center; position: absolute; right: 0; margin: 30px;}
+.sns h4{margin-left: 10px;}
+.sns span{display: block; width: 25px; height: 25px; margin-left: 15px;}

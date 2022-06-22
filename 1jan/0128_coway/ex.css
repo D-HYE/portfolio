@@ -1,0 +1,28 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #1b2529; line-height: 1;}
+a{text-decoration: none; color: #1b2529; line-height: 1;}
+ul, li{list-style: none;}
+
+
+.wrap{width: 1400px; margin: auto;}
+.title{margin: 30px 0 0 85px;}
+.title h3{font-size: 1.5rem;}
+.title h2{width: 500px; font-size: 3.8rem;}
+
+.cont{position: relative; height: 560px;}
+
+.tabList{position: absolute; top: 70px; right: 65px; width: 285px; height: 348px;}
+.tabList a{position: relative; display: block; width: 285px; height: 116px; padding: 46px 0 18px 72px;}
+
+.tabList a:after{content: ""; position: absolute; right: 0; bottom: 0; display: block; width: 100%; height: 1px; background-color: #e8ecee; transition: ease .5s;}
+.tabList a.click:after{content: ""; width: 350px; height: 2px; background-color: #1b2529;}
+
+.tabList a b{display: block; margin-bottom: 12px; font-size: 1.6rem; letter-spacing: -0.1em;}
+
+.tabList a i{position: relative; font-size: 2.4rem; font-weight: bold; font-style: normal;}
+.tabList a i:after{content: ""; position: absolute; top: 50%; right: -24px; transform: translateY(-50%); z-index: 1; width: 16px; height: 14px; background: url(./arr_btnTxt4.png) no-repeat -16px 50% /100%; transition: linear .3s;}
+.tabList a.click i:after{content: ""; background-position-x: center;}
+
+.tabList a span{position: absolute; top: 46px; left: 36px; color: #bec8cc; font-size: 1.8rem; font-weight: bold;}
+
+.tabImg figure{width: 788px; height: 560px; position: absolute; top: -20px; left: 150px; z-index: -3;}

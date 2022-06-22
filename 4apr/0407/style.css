@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; cursor: pointer;}
+
+
+body{width: 100%; height: 12000px;  background: #000}
+h1{position: fixed; top: 5%; left: 5%;}
+h2{position: fixed; top: 40px; left: 40px; z-index: 50; font-size: 100px;}
+
+section{position: fixed; bottom:0; right: 2.5%; width: 85%; height: 80vh; background: rgba(255, 255, 255, .2); perspective: 1000px; overflow: hidden;}
+
+article{position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; opacity: 0; transition: .3s;}
+article.on{z-index: 2; opacity: 1;}
+#art1{transform: translateZ(0);}
+#art2{transform: translateZ(-2500px);}
+#art3{transform: translateZ(-5000px);}
+#art4{transform: translateZ(-7500px);}
+#art5{background: #fff; transform: translateZ(-10000px);}
+article video{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 1600px;}
+h3{position: absolute; color: #fff; font-weight: 900; letter-spacing: -0.5rem;}
+#art1 h3{right: 1.5%; bottom: 5%; font-size: 20rem;    opacity: .5;}
+#art2 h3{left: 1.5%; top: 50%; transform: translateY(-50%); font-size: 15rem;}
+#art3 h3{right: 1.5%; top: 50%; transform: translateY(-50%); font-size: 15rem;}
+#art4 h3{top: 50%; transform: translateY(-50%); width: 100%; font-size: 10rem; text-align: center;}
+#art5 img{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%;}
+
+.imgbox{position: fixed; top: -1.5%; right: -3%; width: 400px; height: 400px;}
+.imgbox img{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;}
+.imgbox img.on{opacity: 1;}
+
+.scrollNav{position: fixed; top: 300px; left: 0; z-index: 50; }
+.scrollNav li{width: 200px; margin: 10px 0; padding: 15px 25px 15px 50px; font-size: 1.8rem; color: #fff; background: rgba(255, 255, 255, 0); transition: .3s;}
+.scrollNav li.on{color: #000; background: rgba(255, 255, 255, 1); font-weight: 900;}

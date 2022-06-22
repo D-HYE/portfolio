@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1MILION</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1><a href="#"><img src="./img/logo.png" alt="logo"></a></h1>
+    
+    <section>
+        <article id="art1" class="on"><video src="./img/1m.mp4" autoplay muted loop></video><h3>1MILION</h3></article>
+        <article id="art2"><video src="./img/Lia+Kim.mp4" autoplay muted loop></video><h3>Lia KIM</h3></article>
+        <article id="art3"><video src="./img/Jin+Lee.mp4" autoplay muted loop></video><h3>Jin LEE</h3></article>
+        <article id="art4"><h3>준비중 입니다.</h3></article>
+        <article id="art5"><img src="./img/logo-1-million.e5841125.svg" alt="logo"></article>
+
+    </section>
+    <div class="imgbox">
+        <img src="./img/ani1.gif" alt="animation" class="on">
+        <img src="./img/ani2.gif" alt="animation">
+        <img src="./img/ani3.gif" alt="animation">
+        <img src="./img/ani4.gif" alt="animation">
+    </div>
+    <ul class="scrollNav">
+        <li class="on">HOME</li>
+        <li>OUR VALUE</li>
+        <li>OUR VALUE</li>
+        <li>article4</li>
+        <li>CONTACT US</li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $('.scrollNav li').on('click', function(){
+            let idx = $(this).index();
+            $('html').stop().animate({'scrollTop': 2500*idx}, 700)
+        })
+
+        $(window).on('scroll', function(){
+            let winST = $(this).scrollTop()
+            
+
+            $('article').each(function(i){
+                $('article').eq(i).css({'transform':'translateZ(' + parseInt((-2500*i) + winST) + 'px)'});
+          
+                if (winST >= i * 2500 && winST < (i + 1) * 2500) {
+                    $('.scrollNav li').removeClass();
+                    $('.scrollNav li').eq(i).addClass('on');
+                    $('article').removeClass();
+                    $('article').eq(i).addClass('on');
+                    $('.imgbox img').removeClass();
+                    $('.imgbox img').eq(i).addClass('on');
+                }
+            })
+            /*  let artST = $(this).offset().top
+                if(winST >= artST - 350 ){
+                    $('article').removeClass('on')
+                    $(this).addClass('on')
+                    $('.scrollNav li').removeClass('on')
+                    $('.scrollNav li').eq(i).addClass('on')
+                }else if(winST == 0){
+                    $('article').removeClass('on')
+                    $('article').eq(0).addClass('on')
+                    $('.scrollNav li').removeClass('on')
+                    $('.scrollNav li').eq(0).addClass('on')
+                }
+
+            })
+
+
+            $('.art1').css({'transform' : 'translateZ('+ winST + 'px)'})
+            $('.art2').css({'transform' : 'translateZ('+ (winST - 2500) + 'px)'})
+            $('.art3').css({'transform' : 'translateZ('+ (winST - 5000) + 'px)'})
+            $('.art4').css({'transform' : 'translateZ('+ (winST - 7500) + 'px)'})
+            $('.art5').css({'transform' : 'translateZ('+ (winST - 10000) + 'px)'})
+            */
+        })
+    </script>
+
+</body>
+</html>

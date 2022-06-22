@@ -1,0 +1,29 @@
+.frame {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.heading {
+  font-size: 50px;
+  color: navy;
+}
+
+/* ---------- ---------- ---------- */
+:is(header, section, footer) h2 {
+  font-size: 20px;
+}
+
+:is(header, section, footer) h2:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 30px;
+  margin-right: 10px;
+  background: #000;
+  transform: translateY(7px);
+}
+
+.frame :is(h2, h3, h4) {
+  background: #ff8e8e;
+}

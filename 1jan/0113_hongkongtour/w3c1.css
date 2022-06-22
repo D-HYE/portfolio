@@ -1,0 +1,57 @@
+nav{
+    position: fixed; left: 0; bottom: 0; z-index: 1;
+    width: 100vw; height: 55px;
+    background: rgba(255, 255, 255, .5);
+}
+nav>ul{display: flex; justify-content: center;}
+nav>ul>li{width: 24%; padding: 20px 16px; text-align: center;}
+nav>ul>li>a{font-size: 1.5rem;}
+
+.wrap{background: #ffdddd; filter: grayscale(50%);}
+#set1, .flower{
+    position: relative;
+    height: 100vh; background: url(./img/wedding_couple.jpg) no-repeat center/cover; text-align: center;
+}
+.box{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+#set1 .box h1{
+    margin: 10px 0;
+    font-size: 6.4rem; color:#fff; font-weight: normal;
+}
+#set1 .box h2{margin: 10px 0 20px; font-size: 3rem; color: #fff; font-weight: normal;}
+
+#set2, #set3, #set4{padding: 64px 16px; text-align: center;}
+#set2 h2, #set3>h2{margin: 10px 0; font-size: 3.6rem; color: #757575; font-weight: normal;}
+
+#set2 img, #set3 img{width: 100%; max-width: 980px; margin: 32px 0;}
+#set2 article{width: 100%; max-width: 980px; margin: 15px auto;line-height: 2; font-size: 1.5rem; text-align: left; font-style: italic; font-weight: normal;}
+/* 부모 태그에 max-width > 자식 태그(img, p)에 width 100%를 사용하는 쪽이 더 영리했을 수도?! */
+
+#set2 button{
+    width: 185px; height: 60px; padding: 12px 24px; margin: 15px 0;
+    font-size: 1.8rem; color: #fff;
+    border-radius: 4px; background: #000;
+}
+.flower{background-image: url(./img/flowers.jpg);}
+.flower h2{margin: 10px 0; font-size: 6.4rem; color: #fff; font-weight: normal;}
+.flower h3{margin: 10px 0; font-size: 3rem; color: #fff; font-weight: normal;}
+
+#set3 h2{margin: 64px 0;}
+.desc{margin: auto; width: 980px;}
+.desc>ul{display: flex; justify-content: center; width: 100%; max-width: 980px;}
+.desc>ul>li{width: 50%;}
+.desc>ul>li>span{display: inline-block; margin: 10px; font-size: 3rem; font-weight: normal;}
+.desc>ul>li li{margin: 15px; font-size: 1.5rem; font-weight: normal;}
+
+#set4{background: #ffdddd;}
+#set4 h2{margin: 10px; font-size: 3.6rem; font-weight: normal;}
+#set4 h3{margin: 18px; font-size: 1.8rem; font-weight: normal;}
+#set4 button{
+    width: 180px; height: 60px; padding: 8px 60px;
+    font-size: 2.4rem; color: #fff;
+    border-radius: 4px; background: #f44336;
+}
+
+footer{height: 92px; padding: 16px 0; background: #000;}
+footer p{margin: 15px 0; color: #fff; font-size: 1.5rem; text-align: center; font-weight: normal;}
+
+#set2 button:hover, #set4 button:hover{background: #ccc; color: #000;}

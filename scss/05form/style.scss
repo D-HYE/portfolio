@@ -1,0 +1,18 @@
+body{display: flex; justify-content: center; align-items: center; height: 100vh; background: #efefef;}
+.wrap{
+    text-align: center;
+
+    h2{margin-bottom: 30px; font-size: 30px; font-weight: normal;}
+    form{
+        width: 400px; padding: 35px 20px 50px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .1); background: #fff; border-radius: 2px; border: none;
+
+        input{display: block; width: 100%; padding: 10px 5px; margin: 10px 0;}
+        input[type=button]{
+            cursor: pointer;
+        }
+        input[type=email]{
+            &:focus{background: rgb(255, 215, 140);}
+        }
+        input[type=submit]{cursor: pointer;}
+    }
+}

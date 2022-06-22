@@ -1,0 +1,254 @@
+
+
+@font-face {
+    font-family: '국립박물관문화재단클래식L';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식L.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: ferrero;
+    src: url(../fonts/Ferrero-StrettoGentile.otf);
+    
+}
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url(../fonts/Cormorant-Infant.woff2) 
+  }
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSans-Light.woff);
+}
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none;color: #333;display: block;}
+
+body{font-family: noto}
+.mobile{display: none;}
+.pc{display: none;}
+.flex{display: flex; justify-content: space-between; align-items: center;}
+.posCent{position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+/* 헤더 */
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; border-bottom: 1px solid #D5AC5B; background: #fff; transition: .3s;}
+header .inner{max-width: 1400px; height: 100px; margin: auto; padding: 0 7.5%; transition: .3s;}
+#logo a{width: 110px; height: 70px; background: url(../img/global-logo.svg) no-repeat center/contain;}
+nav{width: 30%;}
+nav .flex{width: 100%;}
+nav li a{font-family: 'Cormorant Infant', 'sans-serif'; font-size: 20px; color: #D5AC5B; letter-spacing: -0.18px;}
+.bar{padding: 5px 2.5%; cursor: pointer;}
+.bar1, .bar2, .bar3 {
+    width: 35px; height: 3px; margin: 8px 0;
+    background-color: #D5AC5B; border-radius: 3px;
+}
+header .sns{width: 30%;}
+header .sns ul{padding-left: 40%;}
+/* 사이드네비 */
+.sideNav{position: fixed; top: 0; left: -60%; z-index: 20;  display: none; width: 45%; height: 100vh; padding: 100px 0; background: #fff; box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3); transition: .3s;}
+.sideNav>ul{width: 100%; padding: 50px 7.5% 50px; border-top: 1px solid #2B1A15;}
+.sideNav>ul a{padding: 10px 0; font-family: 'ferrero', 'sans-serif'; font-size:  22px; color: #2B1A15; letter-spacing: -0.15px;}
+.sideNav .sns{padding: 20px 7.5% 0; border-top: 1px solid #D5AC5B;}
+.sideNav .sns ul{justify-content: flex-start; gap: 20px;}
+.close{position: absolute; top: 10px; right: 7.5%; transform: translateY(50%); width: 35px; cursor: pointer; transition: .3s;}
+.close1, .close2{width: 35px; height: 3px; margin: 8px 0; background-color: #2B1A15; border-radius: 3px;}
+.close1{transform: rotate(-45deg) translate(-3px, 9px); }
+.close2{transform: rotate(45deg) translate(2px, -4px);}
+.dim{position: fixed; top: 0; left: 0; z-index: 15; display: none; width: 100%; height: 100vh; background: rgba(0, 0, 0, .5);}
+/* sect1 */
+.sect1{background-image: url(../img/ourstorymain.jpg);background-repeat: no-repeat;background-size: cover;background-position: center; background-attachment: fixed;}
+
+/* sect2 */
+.sect2{background: url(../img/bg-pattern.png);;}
+.history h2{ font-family: 'Cormorant Infant';font-weight:400;color: #5c3327;}
+.history p{color: #595959;line-height: 1.5;text-indent: 15px;}
+
+/* sect3 */
+.years ul li{display: flex;}
+.years ul li figure{text-align: center;}
+.sect3{position: relative;}
+span.line{width: 1px;height: 95%;background:#d5ac5b ;display: block;position: absolute;left: 50%;transform: translateX(-50%);top: 20px;opacity: .5;}
+span.line.on{opacity: 1;}
+.years figure img{padding: 0 5px; border-radius: 20px;}
+p.year{font-family: 'Cormorant Infant';color: #d5ac5b;position: relative;}
+.yearTop{font-family: 'Cormorant Infant';color: #d5ac5b}
+
+.years figcaption{font-family: '국립박물관문화재단클래식L';color:#595959}
+p.year::before{content: '◆';position: absolute;;color: #e7dabe;;}
+p.year.on::before{content:'◆';color: #d5ac5b;;position: absolute;}
+.sect3::before{content: '◆';color: #d5ac5b;position: absolute;;left: 50%;transform: translateX(-50%);}
+.sect3::after{content: '◆';color: #d5ac5b;position: absolute;;left: 50%;transform: translateX(-50%)}
+
+
+/* sect4 */
+.sect4{padding-bottom: 200px;}
+.sect4 h2{text-align: center;font-family: 'Cormorant Infant';color:#5c3327 ;}
+.values ul{display: flex;}
+.values ul li{position: relative;transition: .5s;}
+.values ul li:nth-child(1){background: url(../img/value.jpg);background-position: center;background-size: cover;}
+.values ul li:nth-child(2){background: url(../img/value2.jpg);background-position: center;background-size: cover;}
+.values ul li:nth-child(3){background: url(../img/value3.jpg);background-position: center;background-size: cover;}
+.values ul li p.txt{color: #fff; font-family: '국립박물관문화재단클래식L';position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);text-align: center;line-height: 1.5;display: flex;
+    align-items: center;
+    justify-content: center;
+;transition: .5s;}
+
+p.detail{display: none;;;line-height: 1.2;color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);; }
+
+.values ul li:nth-child(1):hover{background-size: cover;background-repeat: no-repeat;transition: .6s;}
+.values ul li:nth-child(2):hover{background-size: cover;background-repeat: no-repeat;transition: .6s;}
+.values ul li:nth-child(3):hover{background-size: cover;background-repeat: no-repeat;transition: .6s;}
+.dim{width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: rgba(0, 0, 0, 0.5);;transition: .5s;}
+
+
+/* footer */
+footer{width: 100%; padding: 20px 5% 40px; background: #2B1A15;}
+footer ul{width: 80%;}
+footer ul a{padding: 5px 10px; font-size: 15px; color: #fff; font-weight: 300;}
+footer ul li:first-child a{color: #D5AC5B;}
+footer p{margin-top: 20px; font-size: 13px; color: #666; font-weight: 300;}
+
+/* -------------mobile------------------ */
+@media only screen and (max-width: 500px){
+    .mobile{display: block;}
+    header{height: 70px;}
+    header .inner{height: 70px; padding: 0 5%;}
+    #logo a{width: 230px; background-image: url(../img/global-logo_tablet.svg);}
+    .sideNav{width: 60%; padding: 70px 0;}
+    .sideNav .close{top: 0;}
+/* sect1 */
+.sect1{height: 65vw;background-position-y:-70px ;}
+/* sect2 */
+.sect2{position: relative;margin-bottom: 100px;}
+.history h2{font-size: 40px;;padding-bottom: 40px;text-align: center;line-height: 1.5;padding-top: 50px;}
+.ferrero{position: absolute;;bottom: 50px;left: 50%;transform: translateX(-50%);}
+.history p{font-size: 15px;width: 380px;margin: auto;padding-bottom: 300px;}
+/* sect3 */
+span.line{display: none;}
+.sect3::after{display: none;}
+.sect3::before{display: none;}
+.years li{flex-direction: column;;}
+.yearTop{text-align: center;font-size: 30px;padding: 20px 0;}
+
+.year{display: none;}
+figure{padding-bottom: 20px;}
+figcaption{text-align: center;font-size: 15px;line-height: 1.2;}
+.years ul li{padding-bottom: 60px;}
+.years ul li:nth-child(1) img{max-width: 175px;width: 40%;}
+.years ul li:nth-child(2) img{max-width: 175px;width: 45%;}
+.years ul li:nth-child(3) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(4) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(5) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(6) img{max-width: 200px;width: 45%;}
+.yearTop{position: relative;}
+.yearTop::before{content: '◆';font-size: 15px;position: absolute;left: 40%;top: 50%;transform: translateY(-50%);}
+.yearTop::after{content: '◆';font-size: 15px;position: absolute;right: 40%;top: 50%;transform: translateY(-50%);}
+
+/* sect4 */
+.sect4 h2{font-size: 40px;padding-bottom: 50px;}
+.values ul{flex-direction: column;align-items: center;}
+.values ul li{width: 300px;height: 412.5px;transition: .5s;}
+
+p.txt{top: 50%;transform: translateY(-50%);font-size: 22px;}
+p.detail{width: 65%;}
+.values ul li:nth-child(3){background-size: cover;background-repeat: no-repeat;;}
+
+
+
+
+
+}
+    
+/*------------- tb------------------------ */
+@media only screen and (min-width: 501px) {
+    .sideNav{width: 35%;}
+/* sect1 */
+.sect1{height: 50vw;background-position-y:-25px ;}
+/* sect2 */
+.sect2{position: relative;z-index: -100;}
+.sect2Inner{padding: 100px 0;}
+.ferrero{position: absolute;opacity: .5;bottom: 20px;z-index: -2;;}
+.history h2{font-size: 45px;;padding-bottom: 70px;text-align: center;}
+.history p{font-size: 20px;width: 580px;margin: auto;z-index: -1;;}
+/* sect3 */
+.sect3{padding: 100px 0 150px ;margin-top: 70px;}
+
+.years ul li:nth-child(1) img{max-width: 175px;width: 40%;}
+.years ul li:nth-child(2) img{max-width: 175px;width: 45%;}
+.years ul li:nth-child(3) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(4) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(5) img{max-width: 300px;width: 60%;}
+.years ul li:nth-child(6) img{max-width: 200px;width: 45%;}
+.years figure{width: 50%;padding-top: 50px;padding-bottom: 40px;}
+
+p.year{font-size: 38px;padding-bottom: 20px;}
+figcaption{font-size: 20px;line-height: 30px;margin-left: 18px;}
+p.year.on::before{font-size: 15px;;top: 0;left: -25px;}
+p.year::before{top: 0;left: -25px;font-size: 15px}
+.sect3::before{top: 13px; font-size: 15px;}
+.sect3::after{bottom: 3.5%; font-size: 15px;}
+.yearTop{display: none;}
+
+/* sect4 */
+.sect4 h2{font-size: 45px;padding-bottom: 100px;}
+.values ul{justify-content: center;}
+.values ul li{width:25%;height: 40vw;}
+p.txt{font-size: 1.4em;width: 200px;height: 90px;}
+.values ul li.on{width: 50%;}
+p.detail{width: 300px;}
+footer ul{width:60%;}
+
+
+}
+
+
+
+
+
+/*-------------------- pc--------------------- */
+@media only screen and (min-width: 1024px) {
+    .pc{display: block;}
+    .bar{display: none;}
+    .sideNav{display: none;}
+
+.sect3,.sect4{width: 1200px;margin: auto;}
+
+/* sect1 */
+.sect1{height: 40vw;background-position-y:-100px }
+
+/* sect2 */
+.sect2Inner{display: flex;width: 1200px;margin: auto;}
+.ferrero{width: 50%;position: relative;opacity: 1}
+.ferrero img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 60%;;}
+.history{width: 50%;;}
+.history h2{font-size: 75px;line-height: 100px;width: 590px;text-align: left;}
+.history p{font-size: 20px;width: 600px;;}
+
+/* sect3 */
+.sect3{padding: 150px 0;margin-top: 100px;}
+.years{width: 100%;}
+.years ul li{padding-bottom: 145px;}
+.years ul li:nth-child(1) img{max-width: 230px;height: 280px;;}
+.years ul li:nth-child(2) img{max-width: 230px;height: 280px;}
+.years ul li:nth-child(3) img{max-width: 480px;}
+.years ul li:nth-child(4) img{max-width: 480px;}
+.years ul li:nth-child(5) img{max-width: 480px;}
+.years figure{width: 50%;padding-top: 90px;padding-bottom: 0;}
+.years figcaption{width: 40%;margin-left: 36px;}
+figcaption{font-size: 24px;line-height: 49px;}
+p.year{font-size: 58px;padding-bottom: 30px;}
+p.year.on::before{font-size: 20px;;top: 0;left: -9.5%;}
+
+p.year::before{top: 0;left: -9.5%;font-size: 20px;}
+.sect3::before{top: 10px;font-size: 20px;}
+.sect3::after{bottom: 145px;font-size: 20px;}
+.yearTop{display: none;}
+
+/* sect4 */
+.sect4 h2{font-size: 75px;padding-bottom: 100px;}
+.values ul li{height: 550px;}
+p.txt{font-size: 45px;width: 300px;height: 148px;}
+footer ul{width: 40%;}
+
+}

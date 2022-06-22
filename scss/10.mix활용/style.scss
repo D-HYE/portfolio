@@ -1,0 +1,18 @@
+body{display: flex; justify-content: center; align-items: center; height: 100vh;}
+
+@mixin buttonUi{
+    width: 150px; padding: 7px; font-size: 20px; color: #fff; background: #eee; outline: none; border: 1px solid #333; border-radius: 5px; transition: .35s;
+    &.complete{
+        background: royalblue; 
+    }
+    &.loading{
+        background: rgb(65, 225, 78); color: #333;
+    }
+    &.error{
+        background: rgb(255, 146, 73);
+    }
+}
+
+.complete{@include buttonUi; border-color: blue}
+.loading{@include buttonUi; border-width: 2px;}
+.error{@include buttonUi;}

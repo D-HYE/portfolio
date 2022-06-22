@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+html, body{font-size: .625em; color: #333; font-family: 'Noto Sans KR', sans-serif; line-height: 1;}
+a{display: block; text-decoration: none; color: #333;}
+ul, li{list-style: none;}
+button{background: none; border: none; text-indent: -9999px; cursor: pointer;}
+
+.flex{display: flex;}
+
+header{position: fixed; top: 0; left: 0; z-index: 10; width: 100%; height: 90px; padding: 15px; background-image: linear-gradient(to bottom, #600624, rgba(231, 25, 61, .3)); border-bottom: 2px solid #fff;}
+#logo a{width: 120px; margin: auto;}
+#logo a img{width: 100%;}
+.bar{position: absolute; top: 50%; right: 2.5%; transform: translateY(-50%); cursor: pointer;}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+.mySwiperV{position: relative; width: 100%; height: 100vh;}
+.swiper-slide{width: 100vw;}
+/* main */
+#main-page{position: relative; width: 100%; height: 100%; overflow: hidden;}
+#main-page video{position: absolute; left: 50%; transform: translateX(-50%); width: 100%; min-width: 1600px;}
+/* promotion */
+#promtion.swiper-slide{min-width: 700px; height: auto; margin-top: 90px; margin-bottom: 0;}
+#promtion > div{position: relative; width: 100%; height: 100%; padding-bottom: 75px;}
+#promtion img{width: 100%;}
+#promtion > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{bottom: 40px;}
+#promtion > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span{width: 15px; height: 15px; background: #ebebeb; opacity: 1; border-radius: 8px; transition: .3s;}
+#promtion > div > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active{width: 45px; background: #600624;}
+.swiper-slide > div > div.swiper-button-next::after, .swiper-slide > div > div.swiper-button-prev::after{content: '';}
+div.mybutton{transform: translateY(-50%); width: 50px; height: 50px; background: url(./img/icon_slide_left.svg) no-repeat left center, #600624; opacity: .7; border-radius: 25px; transition: .5s;}
+div.swiper-button-prev.mybutton{left: 2.5%;}
+div.swiper-button-next.mybutton{right: 2.5%; background-image: url(./img/icon_slide_right.svg);  background-position-x: right;}
+#promtion > .swiper > .mybutton:hover{width: 100px; opacity: 1;}
+/*new-product*/
+#new-product{min-width: 1024px; padding: 140px 0 0; background: #600624;}
+#new-product h2{margin-bottom: 40px; font-size: 4.5rem; color: #fff; font-weight: normal; text-align: center;}
+#new-product > .effectSwiper{position: relative; height: auto; padding: 20px 0;}
+.swiper-slide img{width: 100%;}
+#new-product > div > div.mybutton{background: url(./img/icon_slide_left.svg) no-repeat left center, rgba(0, 0, 0, 0); border: 3px solid #fff; opacity: 1; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);}
+#new-product > div > div.swiper-button-prev.mybutton{left: 5%;}
+#new-product > div > div.swiper-button-next.mybutton{right: 5%; background-image: url(./img/icon_slide_right.svg);  background-position-x: right;}
+#new-product > .swiper > .mybutton:hover{width: 100px;}
+/* brand */
+#brand{min-width: 970px; height: auto; margin-top: 90px;}
+#brand img{width: 100%;}
+/* product */
+#product{min-width: 1024px; height: 100vh; margin-top: 90px; padding: 100px 0 30px; background: url(./img/vanilla.png)no-repeat center/contain;}
+#product h2{margin-bottom: 40px; font-size: 4.5rem; font-weight: normal; text-align: center; color: #600624;}
+#product > .gridSwiper{width: 60%; height: 80%; overflow: hidden;}
+#product > div.gridSwiper > div.swiper-wrapper > .swiper-slide{width: 30%; height: 45%; text-align: center;}
+#product > div.gridSwiper > div.swiper-wrapper > .swiper-slide img{width: 100%; border: 5px solid #fff;}
+#product > div.swiper-button-prev.mybutton:after, #product > div.swiper-button-next.mybutton:after{content: '';}
+#product > div.mybutton{transform: translateY(0); background: url(./img/icon_slide_left_r.svg) no-repeat left center, rgba(0, 0, 0, 0); border: 3px solid #600624; opacity: 1;}
+#product > div.mybutton:hover{width: 100px;}
+#product > div.swiper-button-prev.mybutton{left: 12%;}
+#product > div.swiper-button-next.mybutton{right: 12%; background-image: url(./img/icon_slide_right_r.svg); background-position-x: right;}
+
+body > div.swiper.mySwiperV.swiper-initialized.swiper-vertical.swiper-pointer-events.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical{right: 20px;}
+body > div.swiper.mySwiperV.swiper-initialized.swiper-vertical.swiper-pointer-events.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical > span{width: 5px; height: 50px; margin-bottom: 5px; border-radius: 0; background: #aaa; opacity: .5;}
+body > div.swiper.mySwiperV.swiper-initialized.swiper-vertical.swiper-pointer-events.swiper-backface-hidden > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-vertical > span.swiper-pagination-bullet.swiper-pagination-bullet-active{background: #D5AC5B; opacity: 1;}
+
+footer{position: fixed; z-index: 10; bottom: 0; width: 100%;  height: 90px; background-image: linear-gradient(to top, rgba(0, 0, 0, .5), transparent); }
+.fWrap{justify-content: space-between; align-items: center; min-width: 800px;height: 100%;  padding: 0 2.5%; text-align: center;}
+.notice a{padding: 0 15px; font-size: 1.4rem; color: #fff; font-weight: 100;}
+.sns a{padding: 0 10px;}
+
+@media only screen and (max-width:1400px){
+    #product{max-height: 700px;}
+}
+@media only screen and (max-width:1024px){
+    #product{max-height: 500px;}
+}
