@@ -26,11 +26,21 @@ tl.to("#text3", {scale: 1.3, x: 41, y: 50, ease: Bounce.easeOut}, "scale");
 tl.to("line", {attr: {x1: 100, x2: 100}, delay: 1}, "clear2");
 tl.to("#theSquare", {scaleX: 0, duration: 0.4,  delay: 1}, "clear2");
 tl.to("#open", {opacity: 0});
+tl.to("#skip_btn", {display: "none", opacity: 0});
 
 tl.to("#open", {display: "none"}, "block");
 tl.to("header", {opacity: 1}, "block")
-tl.to("#sect1", {opacity: 1}, "block",)
+tl.to("#sect1", {opacity: 1}, "block")
 
+
+$('#skip_btn').click(function(){
+  $('#open').hide();
+  $('header').show();
+  $('header').css("opacity", 1);
+  $('#sect1').show();
+  $('#sect1').css("opacity", 1);
+  $(this).hide();
+});
 
 
     
